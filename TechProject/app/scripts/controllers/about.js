@@ -14,4 +14,5 @@ angular.module('adminApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.name = "Aman";
   });
