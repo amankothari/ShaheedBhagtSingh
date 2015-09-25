@@ -13,6 +13,7 @@ namespace TechProject.Data.Models
         [Key]
         public int CourseId { get; set; }
         [Column(TypeName="varchar")]
+        [StringLength(100)]
         public string CourseName { get; set; }
         [Column(TypeName = "int")]
         public int Duration { get; set; }

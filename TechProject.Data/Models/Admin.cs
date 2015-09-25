@@ -13,19 +13,24 @@ namespace TechProject.Data.Models
         [Key]
         public int AdminId { get; set; }
         [Column(TypeName = "varchar")]
+        [StringLength(100)]
         public string FirstName { get; set; }
         [Column(TypeName = "int")]
         public Sex sex { get; set; }
-        [Column(TypeName = "nvarchar")]
-        public string MobileNumber { get; set; }
+        [Column(TypeName = "bigint")]
+        public int MobileNumber { get; set; }
 
         [Column(TypeName = "nvarchar")]
+        [StringLength(256)]
         public string Email { get; set; }
         [Column(TypeName = "nvarchar")]
+        [StringLength(256)]
         public string Address { get; set; }
         [Column(TypeName = "varchar")]
+        [StringLength(100)]
         public string City { get; set; }
         [Column(TypeName = "varchar")]
+        [StringLength(100)]
         public string Pincode { get; set; }
 
     }

@@ -13,12 +13,16 @@ namespace TechProject.Data.Models
         [Key]
         public int LoginId { get; set; }
         [Column(TypeName = "varchar")]
+        [Required]
+        [StringLength(100)]
         public string UserName { get; set; }
         [Column(TypeName = "nvarchar")]
+        [StringLength(256)]
         public string Email { get; set; }
         [Column(TypeName = "bigint")]
         public int Mobile { get; set; }
         [Column(TypeName = "nvarchar")]
+        [StringLength(256)]
         public string Password { get; set; }
         [EnumDataType(typeof(LoginType))]
         public LoginType Type { get; set; }
