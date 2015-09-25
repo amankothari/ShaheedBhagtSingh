@@ -24,4 +24,3 @@ C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework
 C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
 C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College1.resources
