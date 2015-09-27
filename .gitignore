@@ -1,0 +1,4 @@
+*.dll
+*.exe
+*.ps1
+*.nupkg
