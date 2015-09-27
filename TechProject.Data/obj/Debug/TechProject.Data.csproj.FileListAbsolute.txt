@@ -24,3 +24,15 @@ C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework
 C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
 C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.dll.config
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.pdb
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.xml
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.pdb
