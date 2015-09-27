@@ -50,15 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext.cs" />
-    <Compile Include="Migrations\201509251849438_College.cs" />
-    <Compile Include="Migrations\201509251849438_College.Designer.cs">
-      <DependentUpon>201509251849438_College.cs</DependentUpon>
+    <Compile Include="Migrations\201509270831287_col.cs" />
+    <Compile Include="Migrations\201509270831287_col.Designer.cs">
+      <DependentUpon>201509270831287_col.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Courses.cs" />
     <Compile Include="Models\Login.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,8 +66,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509251849438_College.resx">
-      <DependentUpon>201509251849438_College.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509270831287_col.resx">
+      <DependentUpon>201509270831287_col.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
