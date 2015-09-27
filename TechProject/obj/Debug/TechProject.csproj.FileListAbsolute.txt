@@ -148,7 +148,10 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.Razor.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.Deployment.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\TechProject.Data.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\WebGrease.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\EntityFramework.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\TechProject.Data.pdb
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\Microsoft.Owin.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.Http.Cors.xml
@@ -164,5 +167,9 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.Razor.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.Deployment.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\EntityFramework.xml
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.pdb
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\EntityFramework.SqlServer.xml

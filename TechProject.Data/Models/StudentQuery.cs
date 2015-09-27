@@ -50,9 +50,10 @@ namespace TechProject.Data.Models
         [Column(TypeName = "varchar")]
         [StringLength(100)]
         public string SchoolName12th { get; set; }
+        [StringLength(100)]
+        public string Stream { get; set; }
 
 
-       
         public string Interest { get; set; }
 
     }

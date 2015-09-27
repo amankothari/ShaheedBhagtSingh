@@ -15,7 +15,7 @@ namespace TechProject.Data.Models
         [Column(TypeName = "varchar")]
         [StringLength(100)]
         public string FirstName { get; set; }
-        [Column(TypeName = "int")]
+        [EnumDataType(typeof(Sex))]
         public Sex sex { get; set; }
         [Column(TypeName = "bigint")]
         public int MobileNumber { get; set; }

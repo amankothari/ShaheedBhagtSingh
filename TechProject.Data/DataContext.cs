@@ -6,12 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using TechProject.Data.Models;
 
+/// <summary>
+/// Datacontext.cs 
+/// interacting for sql database
+/// Developed by : Aman Kothari
+/// Date : 27-sept-2015
+/// </summary>
 namespace TechProject.Data
 {
     public class DataContext : DbContext
     {
         public DataContext():base(@"ConnectionString")
         {
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
 
         }
 
