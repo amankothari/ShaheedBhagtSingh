@@ -31,7 +31,7 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFrame
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.dll
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.pdb
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.college.resources
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.dll
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.pdb

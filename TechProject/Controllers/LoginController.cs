@@ -9,17 +9,17 @@ using TechProject.Data.Models;
 
 namespace TechProject.Controllers
 {
-    [RoutePrefix("api/admin")]
-    public class AdminController : ApiController
+    [RoutePrefix("api/login")]
+    public class LoginController : ApiController
     {
         Repository _repo = new Repository(new DataContext());
         [Route("")]
         [HttpGet]
-        public HttpResponseMessage GetadminDetail(int id)
+        public HttpResponseMessage Getlogindetail(int id)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.GetAdmin(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.Getlogin(id));
             }
             catch (Exception)
             {
@@ -30,11 +30,11 @@ namespace TechProject.Controllers
 
         [Route("")]
         [HttpPost]
-        public HttpResponseMessage addadminDetail(Admin admin)
+        public HttpResponseMessage addloginDetail(Login login)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.AddAdmin(admin));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.Addlogin(login));
             }
             catch (Exception)
             {
@@ -44,11 +44,11 @@ namespace TechProject.Controllers
         }
         [Route("")]
         [HttpPut]
-        public HttpResponseMessage updateadminDetail(Admin admin)
+        public HttpResponseMessage updateloginDetail(Login login)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.UpdateAdmin(admin));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.Updatelogin(login));
             }
             catch (Exception)
             {
@@ -58,11 +58,11 @@ namespace TechProject.Controllers
         }
         [Route("")]
         [HttpDelete]
-        public HttpResponseMessage deleteadminDetail(int id)
+        public HttpResponseMessage deleteloginDetail(int id)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.DeleteAdmin(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.Deletelogin(id));
             }
             catch (Exception)
             {
@@ -76,7 +76,7 @@ namespace TechProject.Controllers
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.GetAllAdmin());
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.GetAllLogins());
             }
             catch (Exception)
             {

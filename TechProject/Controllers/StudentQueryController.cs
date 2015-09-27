@@ -9,17 +9,17 @@ using TechProject.Data.Models;
 
 namespace TechProject.Controllers
 {
-    [RoutePrefix("api/admin")]
-    public class AdminController : ApiController
+    [RoutePrefix("api/stquery")]
+    public class StudentQueryController : ApiController
     {
         Repository _repo = new Repository(new DataContext());
         [Route("")]
         [HttpGet]
-        public HttpResponseMessage GetadminDetail(int id)
+        public HttpResponseMessage Getquerydetail(int id)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.GetAdmin(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.GetstudentQuery(id));
             }
             catch (Exception)
             {
@@ -30,11 +30,11 @@ namespace TechProject.Controllers
 
         [Route("")]
         [HttpPost]
-        public HttpResponseMessage addadminDetail(Admin admin)
+        public HttpResponseMessage addqueryDetail(StudentQuery query)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.AddAdmin(admin));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.AddstudentQuery(query));
             }
             catch (Exception)
             {
@@ -44,11 +44,11 @@ namespace TechProject.Controllers
         }
         [Route("")]
         [HttpPut]
-        public HttpResponseMessage updateadminDetail(Admin admin)
+        public HttpResponseMessage updatequeryDetail(StudentQuery query)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.UpdateAdmin(admin));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.UpdatestudentQuery(query));
             }
             catch (Exception)
             {
@@ -58,11 +58,11 @@ namespace TechProject.Controllers
         }
         [Route("")]
         [HttpDelete]
-        public HttpResponseMessage deleteadminDetail(int id)
+        public HttpResponseMessage deletequeryDetail(int id)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.DeleteAdmin(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.DeletestudentQuery(id));
             }
             catch (Exception)
             {
@@ -72,11 +72,11 @@ namespace TechProject.Controllers
         }
         [Route("all")]
         [HttpGet]
-        public HttpResponseMessage alladminDetail()
+        public HttpResponseMessage allqueryDetail()
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.GetAllAdmin());
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.GetAllstudentQuery());
             }
             catch (Exception)
             {
