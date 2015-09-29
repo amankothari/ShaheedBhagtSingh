@@ -1,0 +1,120 @@
+﻿<style>
+    .line {
+        border-top: 2px solid #6091ba;
+        display: inline-block;
+        padding: 0 15px;
+        padding-top: 5px;
+    }
+    .section-content {
+        padding: 15px;
+        padding-top: 0;
+        padding-bottom: 7px;
+    }
+    .flexslider {
+        margin: 0px 0 23px !important;
+    }
+</style>
+<div>
+    <div class="wrapper">
+        <!-- ******HEADER****** -->
+        <section data-ng-include=" 'app/views/website/header.html' "></section>
+       
+        <!--//header-->
+        <!-- ******NAV****** -->
+        <nav class="main-nav" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item"><a href="#/index">Home</a></li>
+                        <li class=" nav-item"><a href="#/AboutUs">About Us </a></li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Courses <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/Courses">Course 1</a></li>
+                                <li><a href="#/Courses">Course 2</a></li>
+                                <li><a href="#/Courses">Course 3</a></li>
+                                <li><a href="#/Courses">Course 4</a></li>
+                               
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a href="#/News">New & Events</a></li>
+
+                        <li class="nav-item"><a href="#/contact">Contact Us</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </div><!--//container-->
+        </nav><!--//main-nav-->
+        <!-- ******CONTENT****** -->
+
+    </div>
+    <div class="content container" style="padding-bottom:20px">
+        <div ng-controller="CarouselDemoCtrl" id="promo-slider" class="slider flexslider col-md-12">
+            <div class="slides">
+                <carousel interval="myInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}">
+                        <p class="flex-caption">
+                            <span class="main">{{slide.title}}</span>
+                            <br />
+                            <span class="secondary clearfix">Donec accumsan nunc sed ipsum dapibus consectetur</span>
+                        </p>
+                        <div class="carousel-caption">
+                            <!--<h4>Slide {{slide.title}}</h4>-->
+                            <!--<h4> {{$index+1}}</h4>-->
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+        <section class="col-md-8" style="padding-left: 0px;">
+            <section class="links" style="background: #f5f5f5; overflow: hidden; margin-bottom: 30px; ">
+                <h1 class="section-heading text-highlight" style="margin-top: 0px; font-size:20px"><span class="line">Quick Links</span></h1>
+                <div class="section-content">
+                    <p><a href="http://bubhopal.nic.in/" target="_blank"><i class="fa fa-caret-right"></i>&nbsp;Barkatullah University</a></p>
+                    <p><a href="http://www.bubhopal.nic.in/results/default1.htm" target="_blank"><i class="fa fa-caret-right"></i>&nbsp;Results </a></p>
+                    <p><a href="http://bubhopal.nic.in/news.htm" target="_blank"><i class="fa fa-caret-right"></i>&nbsp;News & Notification </a></p>
+                    <p><a href="http://www.bubhopal.nic.in/timetable.htm" target="_blank"><i class="fa fa-caret-right"></i>&nbsp;Time Table</a></p>
+                    <p><a href="http://mponline.gov.in/portal/" target="_blank"><i class="fa fa-caret-right"></i>&nbsp;MP Online  </a></p>
+                    <p><a href="http://highereducation.mp.gov.in/index.htm" target="_blank"><i class="fa fa-caret-right"></i>&nbsp;Higher Education</a></p>
+
+                </div><!--//section-content-->
+            </section>
+        </section>
+        <section class="promo box box-dark  col-md-4 col-xs-12">
+            <div class="col-md-12 col-xs-12">
+                <h1 class="section-heading" style="margin-top: 5px; font-size:20px">Student Login</h1>
+                <div class="form-group">
+                    <input type="email" class="form-control" ng-model="Logindata.userid" placeholder="Enter your email" />
+                </div>
+                <input type="password" class="form-control" ng-model="Logindata.password" placeholder="Enter your password" />
+            </div>
+            <div class="col-md-2 col-xs-12 form-group" style="margin-top: 10px; ">
+                <a class="btn btn-cta" ng-click="Login(Logindata)"><i class="fa fa-play-circle"></i>Login Now</a>
+                <a class="btn col-md-10">{{msg}}</a>
+            </div>
+        </section><!--//promo-->
+        <section class="promo box box-dark col-md-12 hidden-xs">
+            <div class="col-md-12">
+                <h1 class="section-heading" style="margin-top: 5px; font-size:20px">Why SAHEED BHAGAT SINGH COLLEGE ?</h1>
+                <p>The Campus exudes a cosmopolitan atmosphere with students from all corners of the Country. This is a private self-financing group with this motto "Ready For Every Good Work" The College over ventures into new initiatives for the development of human society. The college campus is located in Datia District nestled between Gwalior and Jhansi. The campus spread over 50 acres of lush green area of land. All the efforts are to provide a sound harmonious nourishment, cadling assistance and eco friendly environment to those Education students who think the sky is only their limit.  </p>
+                <a class="btn btn-cta" style="float:right" href="#/Register"><i class="fa fa-play-circle"></i>Register Now</a>
+            </div>
+
+        </section><!--//promo-->
+        <!--//news-->
+        <!--//cols-wrapper-->
+
+    </div><!--//content-->
+
+
+</div>
+<section data-ng-include=" 'app/views/website/Footer.html' "></section>

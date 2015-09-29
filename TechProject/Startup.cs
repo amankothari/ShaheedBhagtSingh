@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Routing;
 using System.Net.Http.Headers;
 using System.Web.Mvc;
+using System.Web.Http.Cors;
 //using Microsoft.Owin.Security.OAuth;
 
 [assembly: OwinStartup(typeof(TechProject.Startup))]
@@ -22,7 +23,8 @@ namespace TechProject
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
-            //app.UseCors()
+            var cors = new EnableCorsAttribute("*","*","*");
+            httpconfig.EnableCors(cors);
             app.UseWebApi(httpconfig);
             httpconfig.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
         }

@@ -1,0 +1,162 @@
+﻿
+<link href="app/assets/Admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- font Awesome -->
+<link href="app/assets/Admin/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<!-- Ionicons -->
+<link href="app/assets/Admin/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+<!-- Morris chart -->
+<link href="app/assets/Admin/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+
+
+<section data-ng-include=" 'app/views/website/header.html' "></section>    
+<div class="form-box" id="login-box" style="width: 60%; margin: 37px auto 0 auto; ">
+    <div class="header">Register New Membership</div>
+    <form>
+        <div class="body bg-gray" style="height: 555px;">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" ng-model="Register.FirstName" placeholder="Enter First name" />
+            </div>
+          
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" ng-model="Register.LastName" placeholder=" Enter Last name" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" ng-model="Register.MobileNumber" placeholder="Enter Mobile Number" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <input type="email" class="form-control" ng-model="Register.Email" placeholder="Password" />
+            </div>
+
+            <div class="form-group col-md-3">
+                <input class="form-control" placeholder="Gender" readonly />
+            </div>
+            <div class="form-group col-md-3">
+                <select class="form-control" name="Gender" ng-model="Register.Gender">
+                    <option value="">---Select Gender---</option>
+                    <option value="option-1">Male</option>
+                    <option value="option-2">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-3">
+                <input name="password2" class="form-control" placeholder="Category" readonly />
+            </div>
+
+            <div class="form-group col-md-3">
+                <select class="form-control" name="Category" ng-model="Register.Category">
+                    <option value="">---Select Category---</option>
+                    <option value="General">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="ST">ST</option>
+                    <option value="SC">SC</option>
+                </select>
+            </div>
+
+
+            <div class="form-group col-md-3">
+                <input name="text" class="form-control" ng-model="Register.Percentage10th" placeholder="10th Percentage" />
+            </div>
+            <div class="form-group col-md-3">
+                <select class="form-control" name="PassoutYear10th" ng-model="Register.PassoutYear10th">
+                    <option value="">---Passout year---</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                </select>
+            </div>
+
+
+            <div class="form-group col-md-3">
+                <input name="text" class="form-control" ng-model="Register.Percentage12th" placeholder="12th Percentage" readonly />
+            </div>
+            <div class="form-group col-md-3">
+                <select class="form-control" name="PassoutYear12th" ng-model="Register.PassoutYear12th">
+                    <option value="">---Passout year---</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                </select>
+            </div>
+            <div class="form-group"> 
+                <input type="text" class="form-control" ng-model="Register.SchoolName10th" placeholder="10th School Name" />
+
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="Register.SchoolName12th" placeholder="12th School Name" />
+
+            </div>
+            <div class="form-group col-md-3">
+                <input name="text" class="form-control" placeholder="Stream(your subject)" readonly />
+            </div>
+            <div class="form-group col-md-3">
+                <select class="form-control" name="Stream" ng-model="Register.Stream">
+                    <option value="">---Select Subject---</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Science">Science</option>
+                    <option value="Commerse">Commerse</option>
+                    <option value="Art">Art</option>
+                    <option value="Math-Science">Math-Science</option>
+                </select>
+            </div>
+
+
+            <div class="form-group col-md-3">
+                <input name="text" class="form-control" placeholder="Adminssion Course" readonly />
+            </div>
+            <div class="form-group col-md-3">
+                <select class="form-control" name="CourseName" ng-model="Register.CourseName">
+                    <option value="">---Prefered Courses---</option>
+                    <option value="B.sc">B.sc</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BA">BA</option>
+                    <option value="B.com">B.Com</option>
+                    <option value="M.com">M.com</option>
+                    <option value="M.sc">M.sc</option>
+
+                </select>
+            </div>
+
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" ng-model="Register.Pincode" placeholder="Pin Code" />
+            </div>
+
+            <div class="form-group col-md-3">
+                <input name="text" class="form-control"  placeholder="Select City" readonly />
+            </div>
+            <div class="form-group col-md-3">
+                <select class="form-control" name="City" ng-model="Register.City">
+                    <option value="">---Select City---</option>
+                    <option value="Indore">Indore</option>
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Sihore">Sihore</option>
+
+                </select>
+            </div>
+
+           
+         
+        </div>
+        <div class="footer" style="height: 36px;">
+            <button type="submit" ng-click="RegisterData(Register)" class="btn bg-olive btn-block">Sign me up</button>
+            <a href="login.html" class="text-center">I already have a membership</a>
+        </div>
+    </form>
+    <div class="margin text-center">
+        <span>Register using social networks</span>
+        <br />
+        <button class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></button>
+        <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
+        <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
+    </div>
+</div>
