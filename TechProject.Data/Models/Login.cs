@@ -27,6 +27,9 @@ namespace TechProject.Data.Models
         [EnumDataType(typeof(LoginType))]
         public LoginType Type { get; set; }
 
+        public DateTime CreatedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
+        public bool Isdeleted { get; set; }
     }
     public enum LoginType
     {

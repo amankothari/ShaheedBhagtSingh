@@ -23,11 +23,12 @@ namespace TechProject.Data
 
         }
 
+
         public DbSet<StudentQuery> StudentQueries { get; set; }
         public DbSet<Admin> Admins { get; set; }
 
         public DbSet<Login> Logins { get; set; }
         public DbSet<Courses> Courses { get; set; }
-
+        public DbSet<Student> Students { get; set; }
     }
 }

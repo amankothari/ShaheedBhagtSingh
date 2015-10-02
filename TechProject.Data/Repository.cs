@@ -374,6 +374,38 @@ namespace TechProject.Data
         }
         #endregion
 
+        #region
+        /// <summary>
+        /// Method for save all excel rows in database
+        /// </summary>
+        /// <param name="Students"></param>
+       public void AddStudentList(IList<Student> Students)
+        {
+            try
+            {
+                EFExtension.AddRange(_context.Students, Students);
+                SaveContext();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Courses GetCourse(string course)
+        {
+            try
+            {
+                return _context.Courses.Where(x => x.CourseName == course).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
+
 
         public void SaveContext()
         {

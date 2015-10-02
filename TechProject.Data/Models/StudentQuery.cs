@@ -56,6 +56,10 @@ namespace TechProject.Data.Models
 
         public string Interest { get; set; }
 
+        public DateTime CreatedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
+        public bool Isdeleted { get; set; }
+
     }
 
     public enum Sex
@@ -65,10 +69,10 @@ namespace TechProject.Data.Models
     }
     public enum Category
     {
-        General,
+        UR,
         OBC,
         ST,
         SC
     }
-
+   
 }

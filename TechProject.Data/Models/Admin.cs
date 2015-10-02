@@ -33,5 +33,9 @@ namespace TechProject.Data.Models
         [StringLength(100)]
         public string Pincode { get; set; }
 
+
+        public DateTime CreatedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
+        public bool Isdeleted { get; set; }
     }
 }

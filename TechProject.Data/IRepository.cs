@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,11 @@ namespace TechProject.Data
         Login Addlogin(Login loginObj);
         bool Updatelogin(Login loginObj);
         bool Deletelogin(int loginId);
+        #endregion
+
+        #region Student
+        void AddStudentList(IList<Student> Students);
+        Courses GetCourse(string course);
         #endregion
     }
 }
