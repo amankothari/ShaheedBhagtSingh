@@ -1,5 +1,5 @@
 ﻿'use strict';
-Myapp.controller('homeController', ['$scope', '$location', function ($scope, $location) {
+Myapp.controller('homeController', ['$scope', '$location', 'getsetService', function ($scope, $location, getsetService) {
     console.log("Home page is loading...");
    
     $scope.Login = function (Logindata) {
@@ -32,9 +32,10 @@ Myapp.controller('homeController', ['$scope', '$location', function ($scope, $lo
         //console.log(dataToPost);
         //$Location.url = "";
 
-        //$http.post(url, dataToPost).success(function (data,id) {
+        //$http.post(url, dataToPost).success(function (data) {
         //    console.log(data);
         //    alert("Login is succesfully");
+        //    getsetService.Setdata(data);
         //    window.location = "Home.html#/Dashboard";
         //    console.log(data);
 

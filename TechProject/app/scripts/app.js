@@ -34,6 +34,10 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
             templateUrl: 'app/views/website/Team.html',
             //controller: 'StudentDetailsController'
         })
+        .when('/Register', {
+            templateUrl: 'app/views/website/Register.html',
+            controller: 'StudentRegisterController'
+        })
 
   //.........Admin..............//
 
@@ -46,19 +50,56 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
          templateUrl: 'app/views/Admin/login.html',
          controller: 'AdminLoginController'
      })
-    .when('/Admin/StudentData', {
-        templateUrl: 'Admin/views/StudentData.html',
-        //controller: 'AdminStudentDataController'
-    })
-
+    
         .when('/Admin/AddStudent', {
             templateUrl: 'app/views/Admin/AddStudent.html',
             controller: 'AdminAddStudentController'
         })
+         .when('/Admin/Student', {
+             templateUrl: 'app/views/Admin/Student.html',
+             controller: 'AdminAddStudentController'
+         })
+
+        .when('/Admin/Faculty', {
+            templateUrl: 'app/views/Admin/Faculty.html',
+            controller: 'AdminAddStudentController'
+        })
+
+         .when('/Admin/AddFaculty', {
+             templateUrl: 'app/views/Admin/AddFaculty.html',
+             controller: 'AdminAddStudentController'
+         })
+        .when('/Admin/Staff', {
+            templateUrl: 'app/views/Admin/Staff.html',
+            controller: 'AdminAddStudentController'
+        })
+
+         .when('/Admin/AddStaff', {
+             templateUrl: 'app/views/Admin/AddStaff.html',
+             controller: 'AdminAddStudentController'
+         })
+
+         .when('/Admin/Course', {
+             templateUrl: 'app/views/Admin/Course.html',
+             controller: 'AdminAddStudentController'
+         })
+
+         .when('/Admin/AddStaff', {
+             templateUrl: 'app/views/Admin/AddStaff.html',
+             controller: 'AdminAddStudentController'
+         })
+
+         .when('/Admin/Accountant', {
+             templateUrl: 'app/views/Admin/Accountant.html',
+             controller: 'AdminAddStudentController'
+         })
+ //.........End Admin..............//
+
+//.........Student..............//
 
      .when('/Dashboard', {
          templateUrl: 'app/views/StudentPanel/StudentDash.html',
-         //controller: 'StudentDetailsController'
+         controller: 'StudentDashController'
      })
      .when('/UpdateStudent', {
          templateUrl: 'app/views/StudentPanel/UpdateStudent.html',
@@ -74,10 +115,7 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
             templateUrl: 'app/views/StudentPanel/Download.html',
             //controller: 'StudentDetailsController'
         })
-     .when('/Register', {
-         templateUrl: 'app/views/website/Register.html',
-         controller: 'StudentRegisterController'
-     })
+     
      .when('/Fee', {
          templateUrl: '/app/views/StudentPanel/Feedetails.html',
          //controller: 'StudentDetailsController'
@@ -119,23 +157,4 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
     ];
  });
 
- app.factory('getsetService', function () {
-     var tempdata = {};
-     var data = {};
-     //   var recentitem = $injector.get('recentitem');
-     return data = {
-         Getdata: function () {
-             return tempdata;
-         },
-         Setdata: function (input) {
-             console.log("input");
-             console.log(input);
-           
-             return input
-         },
-      
-         reset: function () {
-             tempdata = {};
-         }
-     };
- })
+ 

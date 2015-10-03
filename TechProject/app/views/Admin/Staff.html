@@ -1,0 +1,92 @@
+﻿
+<script src="app/assets/js/jquery-1.11.2.min.js"></script>
+
+<div class="skin-blue">
+    <section data-ng-include="'app/views/Admin/Header.html'"></section>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <section data-ng-include=" 'app/views/Admin/nav.html' "></section>
+        <aside class="right-side">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                   Staff Member
+                    <small>Control panel</small>
+
+                </h1>
+
+                <br />
+
+
+
+                <ol class="breadcrumb">
+                    <li><a href="#/Admin/Dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li class="active"> Staff Member</li>
+                </ol>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+
+                <div class="row">
+                    <div class="col-xs-12 connectedSortable">
+
+                    </div><!-- /.col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <div class="input-group-btn col-xs-3">
+                                    <a href="#/Admin/AddStaff" class="btn btn-sm btn-default"><i class="fa fa-plus" style="color:black"></i>Add Student</a>
+                                </div>
+                                <div class="box-tools">
+                                    <div class="input-group">
+                                        <select class="form-control input-sm pull-right" style="width: 150px;">
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                            <option>option 5</option>
+                                        </select>
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-default"><i class="fa fa-search" style="color:black"></i></button>
+                                        </div>
+
+                                        <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Name Search">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-default"><i class="fa fa-search" style="color:black"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.box-header -->
+                            <div class="box-body table-responsive no-padding">
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <th>Admission Id</th>
+                                            <th>Student Name</th>
+                                            <th>Course</th>
+                                            <th>Semester</th>
+                                            <th>Start Year</th>
+                                            <th>View</th>
+                                        </tr>
+                                        <tr>
+                                            <td>183</td>
+                                            <td>John Doe</td>
+                                            <td>BCA</td>
+                                            <td>3rd </td>
+                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                            <td><span class="label label-success">view details</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div>
+                </div>
+
+
+            </section><!-- /.content -->
+        </aside>
+    </div>
+</div>

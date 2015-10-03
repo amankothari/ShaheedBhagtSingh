@@ -770,7 +770,9 @@
     <Content Include="app\images\team-3.jpg" />
     <Content Include="app\images\team-4.jpg" />
     <Content Include="app\scripts\controllers\AdminAddStudentController.js" />
+    <Content Include="app\scripts\services\getsetServices.js" />
     <Content Include="app\views\Admin\AddStudent.html" />
+    <Content Include="app\views\Admin\Student.html" />
     <Content Include="app\views\Admin\Uploadexelfile.html" />
     <Content Include="app\views\StudentPanel\Download.html" />
     <Content Include="app\views\StudentPanel\Uploadfile.html" />
