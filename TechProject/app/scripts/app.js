@@ -117,4 +117,25 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
           title: 'Come to our Open Days'
       }
     ];
-});
+ });
+
+ app.factory('getsetService', function () {
+     var tempdata = {};
+     var data = {};
+     //   var recentitem = $injector.get('recentitem');
+     return data = {
+         Getdata: function () {
+             return tempdata;
+         },
+         Setdata: function (input) {
+             console.log("input");
+             console.log(input);
+           
+             return input
+         },
+      
+         reset: function () {
+             tempdata = {};
+         }
+     };
+ })

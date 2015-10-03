@@ -23,7 +23,7 @@ Myapp.controller('homeController', ['$scope', '$location', function ($scope, $lo
             $scope.msg = "Please enter correct User id..!";
             console.log($scope.msg);
         }
-        //var url = serviceBase + "api/studentLogin";
+        //var url = "api/studentLogin";
         //var dataToPost = {
         //    EmailId: $scope.Logindata.userid,
         //    Password: $scope.Logindata.Password
@@ -32,10 +32,10 @@ Myapp.controller('homeController', ['$scope', '$location', function ($scope, $lo
         //console.log(dataToPost);
         //$Location.url = "";
 
-        //$http.post(url, dataToPost)
-        //.success(function (data) {
+        //$http.post(url, dataToPost).success(function (data,id) {
         //    console.log(data);
-        //    console.log("Error Gor Here");
+        //    alert("Login is succesfully");
+        //    window.location = "Home.html#/Dashboard";
         //    console.log(data);
 
         //    if (data.id == 0) {
