@@ -1,14 +1,13 @@
 ﻿'use strict';
-Myapp.factory('StudentRegisterServices', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
+Myapp.factory('StudentRegisterServices', ['$http', function ($http) {
 
-    var serviceBase = ngAuthSettings.apiServiceBaseUri;
-
+   
     var RegisterServicesFactory = {};
 
     var _Getregister = function () {
         console.log("in Student Register Services Factory")
 
-        return $http.get(serviceBase + 'api/itemMaster').then(function (results) {
+        return $http.get('http://localhost:49753/api/stquery/all').then(function (results) {
             return results;
         });
     };
@@ -17,14 +16,14 @@ Myapp.factory('StudentRegisterServices', ['$http', 'ngAuthSettings', function ($
 
 
 
-    var _Putregister = function () {
+    //var _Putregister = function () {
 
-        return $http.put(serviceBase + 'api/itemMaster').then(function (results) {
-            return results;
-        });
-    };
+    //    return $http.put(serviceBase + 'api/itemMaster').then(function (results) {
+    //        return results;
+    //    });
+    //};
 
-    RegisterServicesFactory.Putregister = _Putregister;
+    //RegisterServicesFactory.Putregister = _Putregister;
 
     //var _deleteitemMaster = function (data) {
     //    console.log("Delete Calling");

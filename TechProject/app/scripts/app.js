@@ -1,7 +1,7 @@
 /// <reference path="../views/website/index.html" />
 /// <reference path="controllers/homeController.js" />
 'use strict';
-var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'ui.bootstrap'])
+var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'ui.bootstrap', 'angularFileUpload'])
  Myapp.config(function ($routeProvider) {
     return $routeProvider.when("/", {
         redirectTo: "/index"
@@ -35,10 +35,11 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
             //controller: 'StudentDetailsController'
         })
 
+  //.........Admin..............//
 
     .when('/Admin/Dashboard', {
         templateUrl: 'app/views/Admin/Dashboard.html',
-        //controller: 'StudentDetailsController'
+        controller: 'AdminDashController'
     })
 
      .when('/Admin/login', {
@@ -50,6 +51,11 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
         //controller: 'AdminStudentDataController'
     })
 
+        .when('/Admin/AddStudent', {
+            templateUrl: 'app/views/Admin/AddStudent.html',
+            controller: 'AdminAddStudentController'
+        })
+
      .when('/Dashboard', {
          templateUrl: 'app/views/StudentPanel/StudentDash.html',
          //controller: 'StudentDetailsController'
@@ -58,6 +64,16 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
          templateUrl: 'app/views/StudentPanel/UpdateStudent.html',
          //controller: 'StudentDetailsController'
      })
+
+        .when('/Uploadfile', {
+            templateUrl: 'app/views/StudentPanel/Uploadfile.html',
+            //controller: 'StudentDetailsController'
+        })
+
+        .when('/Download', {
+            templateUrl: 'app/views/StudentPanel/Download.html',
+            //controller: 'StudentDetailsController'
+        })
      .when('/Register', {
          templateUrl: 'app/views/website/Register.html',
          controller: 'StudentRegisterController'
@@ -71,8 +87,13 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
     //.when('/contact', {
     //    templateUrl: 'pages/contact.html',
     //    controller: 'contactController'
-    //});
+     //});
+    var serviceBase = 'http://localhost:49753/';
+ //var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
+ 
  });
+
+ 
  console.log(Myapp);
  Myapp.controller('CarouselDemoCtrl', function ($scope) {
      console.log(Myapp);

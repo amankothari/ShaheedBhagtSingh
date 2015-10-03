@@ -1,11 +1,22 @@
 ﻿'use strict';
-Myapp.controller('StudentRegisterController', ['$scope', '$http', function ($scope, $http) {
+Myapp.controller('StudentRegisterController', ['$scope', '$http', 'StudentRegisterServices', function ($scope, $http, StudentRegisterServices) {
     console.log("Student Register 1111 Controller is loading...");
+
+   
+    $scope.student = [];
+    StudentRegisterServices.Getregister().then(function (results) {
+        console.log("gett");
+        $scope.student = results.data;
+        }, function (error) {
+
+    });
+
+
 
     $scope.RegisterData = function (Register) {
         console.log("Add Register data");
         console.log(Register);
-        var url = "http://localhost:49753/api/stquery";
+        var url = "api/stquery";
         //var dataToPost = {
         //    EmailId: $scope.Logindata.userid,
         //    Password: $scope.Logindata.Password

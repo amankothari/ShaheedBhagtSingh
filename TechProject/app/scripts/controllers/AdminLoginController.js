@@ -1,6 +1,6 @@
 ﻿'use strict';
 Myapp.controller('AdminLoginController', ['$scope', '$location', function ($scope, $location) {
-    console.log("Login Controller page is loading...");
+    console.log("Admin Login Controller page is loading...");
    
     $scope.AdminLogin = function (Login) {
 
