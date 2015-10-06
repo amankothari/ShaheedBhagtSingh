@@ -1,63 +1,58 @@
 ﻿'use strict';
-Myapp.controller('homeController', ['$scope', '$location', 'getsetService', function ($scope, $location, getsetService) {
+Myapp.controller('homeController', ['$scope', '$http', '$location', 'getsetService', function ($scope, $http, $location, getsetService) {
     console.log("Home page is loading...");
    
-    $scope.Login = function (Logindata) {
-        console.log("Add itemMaster");
-        var name = 'mipscollege@gmail.com';
-        var password = 12345;
-        if(Logindata.userid==name)
+    $scope.reset = function () {
+        $scope.Logindata = { userid: '', password: '' };
+    }
+
+    $scope.Login = function (Logindata)
+    {
+        console.log(Logindata.password);
+        if ($scope.userForm.$valid)
         {
-            if (Logindata.password == password)
-            {
+            var url = "api/login";
+            var dataToPost = {
+                LoginId: $scope.Logindata.userid,
+                UserName: $scope.Logindata.password
+            };
+            console.log("Succesfully");
+            console.log(dataToPost);
+            $http.post(url, dataToPost).success(function (data) {
+                console.log(data);
+                alert("Login is succesfully");
+                getsetService.Setdata(data);
                 window.location = "Home.html#/Dashboard";
-                console.log(password);
-            }
-            else
-            {
-                $scope.msg = "Please enter correct password..!";
-                console.log($scope.msg);
-            }
+                console.log(data);
+                if (data.id == 0) {
+                    $scope.gotErrors = true;
+                    if (data[0].exception == "Already") {
+                        console.log("Got This User Already Exist");
+                        $scope.AlreadyExist = true;
+                    }
+
+                }
+                else {
+                }
+            })
+        .error(function (data) {
+            alert("Error Got Here is please enter correct user id and paasword, Note- first time user please your userid as Applicant Id and Password is your full name without any space ");
+            console.log("Error Got Here is please enter correct user id and paasword, Note- first time user please your userid as Applicant Id and Password is your full name without any space ");
+            console.log(data);
+            $scope.reset();
+        })
+        }    
+        else
+        {
+            alert("There are invalid fields");
+            $scope.reset();
         }
-        else {
-            $scope.msg = "Please enter correct User id..!";
-            console.log($scope.msg);
-        }
-        //var url = "api/studentLogin";
-        //var dataToPost = {
-        //    EmailId: $scope.Logindata.userid,
-        //    Password: $scope.Logindata.Password
-        //};
-        //console.log("Succesfully");
-        //console.log(dataToPost);
-        //$Location.url = "";
 
-        //$http.post(url, dataToPost).success(function (data) {
-        //    console.log(data);
-        //    alert("Login is succesfully");
-        //    getsetService.Setdata(data);
-        //    window.location = "Home.html#/Dashboard";
-        //    console.log(data);
-
-        //    if (data.id == 0) {
-
-        //        $scope.gotErrors = true;
-        //        if (data[0].exception == "Already") {
-        //            console.log("Got This User Already Exist");
-        //            $scope.AlreadyExist = true;
-        //        }
-
-        //    }
-        //    else {
-
-
-        //    }
-
-        //})
-        // .error(function (data) {
-        //     console.log("Error Got Heere is ");
-        //     console.log(data);
-
-        // })
     };
+
+
+
+   
+        // function to submit the form after all validation has occurred			
+       
 }]);

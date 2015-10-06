@@ -24,7 +24,7 @@ namespace TechProject.Data.Models
         [EnumDataType(typeof(Sex))]
         public Sex Gender { get; set; }
         [Column(TypeName = "bigint")]
-        public int MobileNumber { get; set; }
+        public string MobileNumber { get; set; }
         [Column(TypeName = "nvarchar")]
         [StringLength(256)]
         public string Email { get; set; }

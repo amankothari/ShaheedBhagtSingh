@@ -2414,8 +2414,10 @@ Component: timeline
     ---------
 */
 /* skin-blue navbar */
+
+
 .skin-blue .navbar {
-  background-color: #3c8dbc;
+  background-color:  #00C0EF;
 }
 .skin-blue .navbar .nav a {
   color: rgba(255, 255, 255, 0.8);

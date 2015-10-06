@@ -305,9 +305,6 @@ C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\EntityFramework.xml
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\EntityFramework.SqlServer.xml
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\Microsoft.Owin.xml
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\NPOI.xml
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\NPOI.OOXML.xml
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\NPOI.OpenXml4Net.xml
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.Http.Cors.xml
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.Http.Owin.xml
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\Newtonsoft.Json.xml

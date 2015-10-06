@@ -28,7 +28,7 @@
                         <form>
                             <div class="form-inline">
                                 <div class="form-group">
-                                    <input type="file">
+                                    <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
                                 </div>
                                 <button type="submit" class="btn btn-sm btn-primary">Upload files</button>
                             </div>
@@ -43,7 +43,7 @@
                         <form>
                             <div class="form-inline">
                                 <div class="form-group">
-                                    <input type="file">
+                                    <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
                                 </div>
                                 <button type="submit" class="btn btn-sm btn-primary">Upload files</button>
                             </div>
@@ -58,7 +58,7 @@
                         <form>
                             <div class="form-inline">
                                 <div class="form-group">
-                                    <input type="file">
+                                    <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
                                 </div>
                                 <button type="submit" class="btn btn-sm btn-primary">Upload files</button>
                             </div>
@@ -73,13 +73,19 @@
                         <form>
                             <div class="form-inline">
                                 <div class="form-group">
-                                    <input type="file">
+                                    <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
                                 </div>
-                                <button type="submit" class="btn btn-sm btn-primary">Upload files</button>
+                               
+                            </div>
+                            <div ng-repeat="step in stepsModel">
+                                <img style="width:225px" class="thumb" ng-src="{{step}}" />
                             </div>
                         </form>
                     </div>
                 </div>
+
+
+
             </div> <!-- /container -->
         </aside>
 

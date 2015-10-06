@@ -65,7 +65,7 @@
                         <p class="flex-caption">
                             <span class="main">{{slide.title}}</span>
                             <br />
-                            <span class="secondary clearfix">Donec accumsan nunc sed ipsum dapibus consectetur</span>
+                            <span class="secondary clearfix">Our Organization Setup started in 2001</span>
                         </p>
                         <div class="carousel-caption">
                             <!--<h4>Slide {{slide.title}}</h4>-->
@@ -89,23 +89,31 @@
                 </div><!--//section-content-->
             </section>
         </section>
-        <section class="promo box box-dark  col-md-4 col-xs-12">
-            <div class="col-md-12 col-xs-12">
-                <h1 class="section-heading" style="margin-top: 5px; font-size:20px">Student Login</h1>
-                <div class="form-group">
-                    <input type="email" class="form-control" ng-model="Logindata.userid" placeholder="Enter your email" />
+        <form name="userForm" novalidate>
+            <section class="promo box box-dark  col-md-4 col-xs-12">
+                <div class="col-md-12 col-xs-12">
+                    <h1 class="section-heading" style="margin-top: 5px; font-size:20px">Student Login</h1>
+                    <div class="form-group" ng-class="{ 'has-error': userForm.userid.$invalid && userForm.userid.$dirty }">
+                        <input type="text" name="userid" class="form-control" ng-model="Logindata.userid" placeholder="Enter your Applicant Id" required />
+                        <p ng-show="userForm.userid.$invalid && !userForm.userid.$pristine" class="help-block">You ID is required.</p>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error': userForm.password.$invalid && userForm.password.$dirty }">
+                        <input type="password" name="password" class="form-control " ng-model=" Logindata.password" placeholder="full name as your paasword" required />
+                       
+                    </div>
+                   </div>
+                <div class="col-md-2 col-xs-12 form-group" style="margin-top: 10px; ">
+                    <a class="btn btn-cta" ng-disabled="userForm.$invalid" ng-click="Login(Logindata)"><i class="fa fa-play-circle"></i>Login Now</a>
+                    <a class="btn col-md-10">{{msg}}</a>
                 </div>
-                <input type="password" class="form-control" ng-model="Logindata.password" placeholder="Enter your password" />
-            </div>
-            <div class="col-md-2 col-xs-12 form-group" style="margin-top: 10px; ">
-                <a class="btn btn-cta" ng-click="Login(Logindata)"><i class="fa fa-play-circle"></i>Login Now</a>
-                <a class="btn col-md-10">{{msg}}</a>
-            </div>
-        </section><!--//promo-->
+            </section><!--//promo-->
+        </form>
         <section class="promo box box-dark col-md-12 hidden-xs">
             <div class="col-md-12">
-                <h1 class="section-heading" style="margin-top: 5px; font-size:20px">Why SAHEED BHAGAT SINGH COLLEGE ?</h1>
-                <p>The Campus exudes a cosmopolitan atmosphere with students from all corners of the Country. This is a private self-financing group with this motto "Ready For Every Good Work" The College over ventures into new initiatives for the development of human society. The college campus is located in Datia District nestled between Gwalior and Jhansi. The campus spread over 50 acres of lush green area of land. All the efforts are to provide a sound harmonious nourishment, cadling assistance and eco friendly environment to those Education students who think the sky is only their limit.  </p>
+                <h1 class="section-heading" style="margin-top: 5px; font-size:20px">Why SHAHEED BHAGAT SINGH COLLEGE ?</h1>
+                <p>Ichhawar a renowned city, still it is educationally weak due to scholastic reasons. It is deprived of technologies, professional syllabus and employment techniques, due to which, students of  Ichhawar have pressure to take up education in different cities .
+So with one aim to help students, “  Diwadiya Shiksha Samiti “ has established ‘ SHAHEED BHAGAT SINGH COLLEGE‘ on the name of great freedom fighter ‘SHAHEED BHAGAT SINGH’. </p>
                 <a class="btn btn-cta" style="float:right" href="#/Register"><i class="fa fa-play-circle"></i>Register Now</a>
             </div>
 
@@ -117,4 +125,6 @@
 
 
 </div>
-<section data-ng-include=" 'app/views/website/Footer.html' "></section>
+
+
+    <section data-ng-include=" 'app/views/website/Footer.html' "></section>

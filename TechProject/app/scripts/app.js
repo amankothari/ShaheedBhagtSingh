@@ -84,6 +84,11 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
              controller: 'AdminAddStudentController'
          })
 
+         .when('/Admin/AddCourse', {
+             templateUrl: 'app/views/Admin/AddCourse.html',
+             controller: 'AddCourseController'
+         })
+
          .when('/Admin/AddStaff', {
              templateUrl: 'app/views/Admin/AddStaff.html',
              controller: 'AdminAddStudentController'
@@ -108,7 +113,7 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
 
         .when('/Uploadfile', {
             templateUrl: 'app/views/StudentPanel/Uploadfile.html',
-            //controller: 'StudentDetailsController'
+            controller: 'StudentFileUploadController'
         })
 
         .when('/Download', {
@@ -120,6 +125,10 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
          templateUrl: '/app/views/StudentPanel/Feedetails.html',
          //controller: 'StudentDetailsController'
      })
+      .when('/Changepassword', {
+          templateUrl: '/app/views/StudentPanel/Changepassword.html',
+          //controller: 'StudentDetailsController'
+      })
 
     //// route for the contact page
     //.when('/contact', {
@@ -139,20 +148,20 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
     $scope.slides = [
       {
           image: 'app/images/slide-1.jpg',
-          title: 'Come to our Open Days'
+          title: 'Better Environment For Better Education'
 
       },
       {
           image: 'app/images/slide-2.jpg',
-          title: 'Come to our Open Days'
+          title: 'Improve The Level Of Education Around ICHHAWAR Area'
       },
       {
           image: 'app/images/slide-3.jpg',
-          title: 'Come to our Open Days'
+          title: 'Job Oriented Courses Running'
       },
       {
           image: 'app/images/slide-4.jpg',
-          title: 'Come to our Open Days'
+          title: 'Free Education For Financially Week Student'
       }
     ];
  });
