@@ -243,11 +243,13 @@ namespace TechProject.Data
         {
             try
             {
+                StudentQueryObj.CreatedDate = DateTime.Now;
+                StudentQueryObj.ModifiedDate = DateTime.Now;
                 StudentQuery queries = _context.StudentQueries.Add(StudentQueryObj);
                 SaveContext();
                 return queries;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -374,12 +376,12 @@ namespace TechProject.Data
         }
         #endregion
 
-        #region
+        #region Student
         /// <summary>
         /// Method for save all excel rows in database
         /// </summary>
         /// <param name="Students"></param>
-       public void AddStudentList(IList<Student> Students)
+         public void AddStudentList(IList<Student> Students)
         {
             try
             {
@@ -392,11 +394,50 @@ namespace TechProject.Data
                 throw;
             }
         }
-        public Courses GetCourse(string course)
+          public Courses GetCourse(string course)
         {
             try
             {
                 return _context.Courses.Where(x => x.CourseName == course).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Student GetStudentById(string LoginId)
+        {
+            try
+            {
+                return _context.Students.Where(x => x.ApplicantID == LoginId).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Student GetStudentlogin(Student std)
+        {
+            try
+            {
+                return _context.Students.Where(x => x.ApplicantID == std.ApplicantID && x.Password==std.Password).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+
+        public Student UpdateStudentProfile(Student std)
+        {
+            try
+            {
+                return std;
             }
             catch (Exception)
             {

@@ -1,76 +1,82 @@
-﻿using NPOI.SS.UserModel;
-using NPOI.XSSF.UserModel;
+﻿using Excel;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Web;
 using System.Web.Http;
+using TechProject.Data;
+using TechProject.Data.Models;
+using TechProject.HelperClass;
 
 namespace TechProject.Controllers
 {
-     [RoutePrefix("api/FileUpload")]
+    [RoutePrefix("api/fileupload")]
     public class FileUploadController : ApiController
     {
+        Repository _repo = new Repository(new DataContext());
         [HttpPost]
+        [Route("")]
         public void UploadFile()
         {
+            IExcelDataReader excelReader = null;
+            Helper helper = new Helper();
             if (HttpContext.Current.Request.Files.AllKeys.Any())
             {
-               
                 // Get the uploaded image from the Files collection
-                System.Web.HttpPostedFile httpPostedFile = HttpContext.Current.Request.Files["file"];
-
+                var httpPostedFile = HttpContext.Current.Request.Files["StudentFile"];
                 if (httpPostedFile != null)
                 {
-                    // Validate the uploaded image(optional)
-                    byte[] buffer = new byte[httpPostedFile.ContentLength];
+                    var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/UploadedFiles"), httpPostedFile.FileName);
+                    httpPostedFile.SaveAs(fileSavePath);
+                    FileStream stream = File.Open(fileSavePath, FileMode.Open, FileAccess.Read);
 
-                    using (BinaryReader br = new BinaryReader(httpPostedFile.InputStream))
+                    if (fileSavePath.Contains(".xls"))
                     {
-
-                        br.Read(buffer, 0, buffer.Length);
-
+                        //1. Reading from a binary Excel file ('97-2003 format; *.xls)
+                        excelReader = ExcelReaderFactory.CreateBinaryReader(stream);
                     }
-                    XSSFWorkbook hssfwb;
-                    //   XSSFWorkbook workbook1;
-                    using (MemoryStream memStream = new MemoryStream())
+                    if (fileSavePath.Contains(".xlsx"))
                     {
-                        BinaryFormatter binForm = new BinaryFormatter();
-                        memStream.Write(buffer, 0, buffer.Length);
-                        memStream.Seek(0, SeekOrigin.Begin);
-                        hssfwb = new XSSFWorkbook(memStream);
-                        string sSheetName = hssfwb.GetSheetName(0);
-                        ISheet sheet = hssfwb.GetSheet(sSheetName);
-                      
-                        IRow rowData;
-                        ICell cellData = null;
-                        try
-                        {
-                            for (int iRowIdx = 1; iRowIdx <= sheet.LastRowNum; iRowIdx++)  //  iRowIdx = 0; HeaderRow
-                            {
-                                rowData = sheet.GetRow(iRowIdx);
-
-                                if (rowData != null)
-                                {
-                                }
-                            }
-                            // _UpdateStatus = true;
-                        }
-                        catch (Exception ex)
-                        {
-                            //  logger.Error("Error loading URL for " + URL + "\n\n" + ex.Message + "\n\n" + ex.InnerException + "\n\n" + ex.StackTrace);
-
-                        }
+                        //2. Reading from a OpenXml Excel file (2007 format; *.xlsx)
+                        excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
                     }
+                    //3. DataSet - The result of each spreadsheet will be created in the result.Tables
+                    DataSet result = excelReader.AsDataSet();
+                    //4. DataSet - Create column names from first row
+                    excelReader.IsFirstRowAsColumnNames = true;
+                    // DataSet result = excelReader.AsDataSet();
 
-                    var FileUrl = Path.Combine(HttpContext.Current.Server.MapPath("~/UploadedFiles"), httpPostedFile.FileName);
-
-                    httpPostedFile.SaveAs(FileUrl);
+                    //5. Data Reader methods
+                    IList<Student> Studentquery = new List<Student>();
+                    while (excelReader.Read())
+                    {
+                        if (excelReader.Depth > 1)
+                        {
+                            Student sq = new Student();
+                            sq.ApplicantID = excelReader[1].ToString();
+                            sq.Name = excelReader[2].ToString();
+                            sq.DOB = excelReader[3].ToString();
+                            sq.SO = excelReader[4].ToString();
+                            sq.Gender = excelReader[5].ToString() == "Male" ? Sex.Male : Sex.Female;
+                            sq.Category = helper.Getcategory(excelReader[6].ToString());
+                            sq.AdYear = excelReader[7].ToString();
+                            sq.Course = _repo.GetCourse(excelReader[8].ToString());
+                            sq.Password= excelReader[3].ToString();
+                            Studentquery.Add(sq);
+                        }
+                        //excelReader.GetInt32(0);
+                    }
+                    _repo.AddStudentList(Studentquery);
+                    //6. Free resources (IExcelDataReader is IDisposable)
+                    excelReader.Close();
                 }
+
+
             }
         }
     }

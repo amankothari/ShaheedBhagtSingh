@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace TechProject.Data.Models
 
         [EnumDataType(typeof(Sex))]
         public Sex Gender { get; set; }
-        [Column(TypeName = "bigint")]
+        [Column(TypeName = "nvarchar")]
+        [StringLength(100)]
         public string MobileNumber { get; set; }
         [Column(TypeName = "nvarchar")]
         [StringLength(256)]

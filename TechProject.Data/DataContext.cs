@@ -16,7 +16,7 @@ namespace TechProject.Data
 {
     public class DataContext : DbContext
     {
-        public DataContext():base(@"ConnectionString")
+        public DataContext():base(@"ConnectionStringQuery")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;

@@ -52,6 +52,15 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Generic.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="Migrations\201510071810184_7oct.cs" />
+    <Compile Include="Migrations\201510071810184_7oct.Designer.cs">
+      <DependentUpon>201510071810184_7oct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510071832552_7oct1.cs" />
+    <Compile Include="Migrations\201510071832552_7oct1.Designer.cs">
+      <DependentUpon>201510071832552_7oct1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Courses.cs" />
     <Compile Include="Models\Login.cs" />
@@ -69,7 +78,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <EmbeddedResource Include="Migrations\201510071810184_7oct.resx">
+      <DependentUpon>201510071810184_7oct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510071832552_7oct1.resx">
+      <DependentUpon>201510071832552_7oct1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
