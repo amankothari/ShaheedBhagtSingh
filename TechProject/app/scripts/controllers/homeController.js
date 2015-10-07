@@ -11,10 +11,10 @@ Myapp.controller('homeController', ['$scope', '$http', '$location', 'getsetServi
         console.log(Logindata.password);
         if ($scope.userForm.$valid)
         {
-            var url = "api/login";
+            var url = "api/studentlogin";
             var dataToPost = {
-                LoginId: $scope.Logindata.userid,
-                UserName: $scope.Logindata.password
+                UserName: $scope.Logindata.userid,
+                Password: $scope.Logindata.password
             };
             console.log("Succesfully");
             console.log(dataToPost);

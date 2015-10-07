@@ -23,7 +23,7 @@ namespace TechProject.Data.Models
 
 
         [Display(Name = "Date Of Birth")]
-        public DateTime? DOB { get; set; }
+        public string DOB { get; set; }
         [MaxLength(100)]
         [StringLength(100)]
         [Display(Name = "S/O")]
@@ -38,6 +38,8 @@ namespace TechProject.Data.Models
         public string AdYear { get; set; }
         [Display(Name = "Course")]
         public Courses Course { get; set; }
+
+        public string Password { get; set; }
 
         public DateTime? CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
