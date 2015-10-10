@@ -52,17 +52,9 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Generic.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Migrations\201510071810184_7oct.cs" />
-    <Compile Include="Migrations\201510071810184_7oct.Designer.cs">
-      <DependentUpon>201510071810184_7oct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510071832552_7oct1.cs" />
-    <Compile Include="Migrations\201510071832552_7oct1.Designer.cs">
-      <DependentUpon>201510071832552_7oct1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510101844405_11oct.cs" />
-    <Compile Include="Migrations\201510101844405_11oct.Designer.cs">
-      <DependentUpon>201510101844405_11oct.cs</DependentUpon>
+    <Compile Include="Migrations\201510102025235_oct11.cs" />
+    <Compile Include="Migrations\201510102025235_oct11.Designer.cs">
+      <DependentUpon>201510102025235_oct11.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -82,14 +74,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510071810184_7oct.resx">
-      <DependentUpon>201510071810184_7oct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510071832552_7oct1.resx">
-      <DependentUpon>201510071832552_7oct1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510101844405_11oct.resx">
-      <DependentUpon>201510101844405_11oct.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510102025235_oct11.resx">
+      <DependentUpon>201510102025235_oct11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

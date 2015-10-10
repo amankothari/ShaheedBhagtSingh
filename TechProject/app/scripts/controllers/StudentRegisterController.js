@@ -11,8 +11,6 @@ Myapp.controller('StudentRegisterController', ['$scope', '$http', 'StudentRegist
 
     });
 
-
-
     $scope.RegisterData = function (Register) {
         console.log("Add Register data");
         console.log(Register);
