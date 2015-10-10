@@ -38,7 +38,7 @@ namespace TechProject.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.OK, _repo.GetStudentlogin(Student));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 return Request.CreateResponse(HttpStatusCode.BadRequest);

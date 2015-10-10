@@ -321,5 +321,6 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.Razor.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.Deployment.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.pdb

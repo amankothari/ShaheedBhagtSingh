@@ -53,3 +53,5 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7nov.resources
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
 >>>>>>> a993972d83a75cb2c65e70912b32d58a143ebf35
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7nov.resources
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.oct11.resources
