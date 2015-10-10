@@ -13,7 +13,7 @@ Myapp.controller('homeController', ['$scope', '$http', '$location', 'getsetServi
         {
             var url = "api/studentlogin";
             var dataToPost = {
-                UserName: $scope.Logindata.userid,
+                ApplicantID: $scope.Logindata.userid,
                 Password: $scope.Logindata.password
             };
             console.log("Succesfully");

@@ -36,7 +36,7 @@ namespace TechProject.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.OK, _repo.Addcourse(course));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 return Request.CreateResponse(HttpStatusCode.BadRequest);

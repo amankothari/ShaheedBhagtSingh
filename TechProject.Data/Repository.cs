@@ -66,6 +66,8 @@ namespace TechProject.Data
         {
             try
             {
+                courseObj.CreatedDate = DateTime.Now;
+                courseObj.ModifiedDate = DateTime.Now;
                 Courses newcourse =_context.Courses.Add(courseObj);
                 SaveContext();
                 return newcourse;
@@ -88,7 +90,11 @@ namespace TechProject.Data
                 Courses course = _context.Courses.Where(x => x.CourseId == courseObj.CourseId).FirstOrDefault();
                 if(course != null)
                 {
-                    course = courseObj;
+                    course.CourseFee = courseObj.CourseFee;
+                    course.CourseName = courseObj.CourseName;
+                    course.Duration = courseObj.Duration;
+                    course.NumberOfsemester = courseObj.NumberOfsemester;
+                    course.ModifiedDate = DateTime.Now;
                     _context.Entry(course).State = System.Data.Entity.EntityState.Modified;
                     SaveContext();
                     return true;
@@ -394,7 +400,7 @@ namespace TechProject.Data
                 throw;
             }
         }
-          public Courses GetCourse(string course)
+         public Courses GetCourse(string course)
         {
             try
             {
@@ -406,7 +412,7 @@ namespace TechProject.Data
                 throw;
             }
         }
-        public Student GetStudentById(string LoginId)
+          public Student GetStudentById(string LoginId)
         {
             try
             {
@@ -418,11 +424,12 @@ namespace TechProject.Data
                 throw;
             }
         }
-        public Student GetStudentlogin(Student std)
+          public Student GetStudentlogin(Student std)
         {
             try
             {
-                return _context.Students.Where(x => x.ApplicantID == std.ApplicantID && x.Password==std.Password).FirstOrDefault();
+                var a= _context.Students.Where(x => x.ApplicantID == std.ApplicantID && x.Password==std.Password).FirstOrDefault();
+                return a;
             }
             catch (Exception)
             {
@@ -437,7 +444,19 @@ namespace TechProject.Data
         {
             try
             {
-                return std;
+                Student getstd = _context.Students.Where(x => x.ApplicantID == std.ApplicantID).FirstOrDefault();
+                if (getstd != null)
+                {
+                    getstd.aadharcertURL = std.aadharcertURL;
+                    getstd.cert10thURL = std.cert10thURL;
+                    getstd.cert12thURL = std.cert12thURL;
+                    getstd.domicilecertURL = std.domicilecertURL;
+                    getstd.ModifiedDate = DateTime.Now;
+                    _context.Entry(getstd).State = System.Data.Entity.EntityState.Modified;
+                    SaveContext();
+                    return getstd;
+                }
+                return null;
             }
             catch (Exception)
             {

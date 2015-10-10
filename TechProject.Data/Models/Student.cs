@@ -39,6 +39,11 @@ namespace TechProject.Data.Models
         [Display(Name = "Course")]
         public Courses Course { get; set; }
 
+        public string cert10thURL { get;set;}
+        public string cert12thURL { get; set; }
+        public string domicilecertURL { get; set; }
+        public string aadharcertURL { get; set; }
+
         public string Password { get; set; }
 
         public DateTime? CreatedDate { get; set; }
