@@ -48,3 +48,5 @@ C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFra
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csprojResolveAssemblyReference.cache
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.dll
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.pdb
+C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7nov.resources
+C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache

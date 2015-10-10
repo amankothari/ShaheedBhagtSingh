@@ -21,55 +21,47 @@
             <!-- Main content -->
             <div class="form-box" id="login-box" style="width: 85%; margin: 44px auto 0 auto; ">
                 
-                <form>
-                    <div class="body bg-gray" style="height: 555px;">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" ng-model="Register.FirstName" placeholder="Enter First name" />
-                        </div>
+                <form name="userForm" novalidate>
+                    <div class="panel-body bg-gray">
 
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" ng-model="Register.LastName" placeholder=" Enter Last name" />
+                        <div class="form-group col-md-2">
+                            <img src="app/assets/logo.png"  class="img-responsive"/>
+                            <input type="file" class="form-group" />
                         </div>
+                        <div class="form-group col-md-offset-1 col-md-9">
+                           <span><strong style="font-size:16px">Hello !</strong>{{Loginstudent.Name}}</span>
+                        </div>
+                        <div class="form-group col-md-offset-1 col-md-9">
+                            <span><strong style="font-size:16px">DOB !</strong>{{Loginstudent.DOB}}</span>
+                        </div>
+                        <div class="form-group col-md-offset-1 col-md-9">
+                            <span><strong style="font-size:16px">Gender !</strong>{{Loginstudent.Gender}}</span>
+                        </div>
+                        <div class="form-group col-md-offset-1 col-md-9">
+                            <span><strong style="font-size:16px">Category !</strong>{{Loginstudent.Category}}</span>
+                        </div>
+                        <div class="form-group col-md-offset-1 col-md-9">
+                            <span><strong style="font-size:16px">Course !</strong>{{Loginstudent.Course}}</span>
+                        </div>
+                        <div class="form-group col-md-offset-1 col-md-9">
+                            <span><strong style="font-size:16px">Admission Year !</strong>{{Loginstudent.AdYear}}</span>
+                        </div>
+                        <div class="form-group col-md-6" ng-class="{ 'has-error': userForm.MobileNumber.$invalid && userForm.MobileNumber.$dirty }">
 
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" ng-model="Register.MobileNumber" placeholder="Enter Mobile Number" />
+                            <input type="tel" class="form-control" name="MobileNumber" ng-minlength="10" ng-maxlength="10" ng-model="Register.MobileNumber" placeholder="Enter Mobile Number" required />
+                            <p ng-show="userForm.MobileNumber.$invalid && !userForm.MobileNumber.$pristine" class="help-block">Enter valid mobile number !</p>
                         </div>
-
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" ng-model="Register.Email" placeholder="Password" />
+                        <!--ng-class="{ 'has-error': userForm.userid.$invalid && userForm.userid.$dirty }"-->
+                        <div class="form-group col-md-6" ng-class="{ 'has-error': userForm.Email.$invalid && userForm.Email.$dirty }">
+                            <input type="email" name="Email" class="form-control" ng-model="Register.Email" placeholder="enter Email Id" required />
                         </div>
-
-                        <div class="form-group col-md-3">
-                            <input class="form-control" placeholder="Gender" readonly />
+                   
+                        <div class="form-group col-md-3" ng-class="{ 'has-error': userForm.Percentage10th.$invalid && userForm.Percentage10th.$dirty }">
+                            <input type="tel" ng-maxlength="99" class="form-control" name="Percentage10th" ng-model="Register.Percentage10th" placeholder="10th Percentage" required />
+                            <p ng-show="userForm.Percentage10th.$invalid && !userForm.Percentage10th.$pristine" class="help-block">Enter only number ex- 56 </p>
                         </div>
-                        <div class="form-group col-md-3">
-                            <select class="form-control" name="Gender" ng-model="Register.Gender">
-                                <option value="">---Select Gender---</option>
-                                <option value="option-1">Male</option>
-                                <option value="option-2">Female</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <input name="password2" class="form-control" placeholder="Category" readonly />
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <select class="form-control" name="Category" ng-model="Register.Category">
-                                <option value="">---Select Category---</option>
-                                <option value="General">General</option>
-                                <option value="OBC">OBC</option>
-                                <option value="ST">ST</option>
-                                <option value="SC">SC</option>
-                            </select>
-                        </div>
-
-
-                        <div class="form-group col-md-3">
-                            <input name="text" class="form-control" ng-model="Register.Percentage10th" placeholder="10th Percentage" />
-                        </div>
-                        <div class="form-group col-md-3">
-                            <select class="form-control" name="PassoutYear10th" ng-model="Register.PassoutYear10th">
+                        <div class="form-group col-md-3" ng-class="{ 'has-error': userForm.PassoutYear10th.$invalid && userForm.PassoutYear10th.$dirty }">
+                            <select class="form-control" name="PassoutYear10th" ng-model="Register.PassoutYear10th" required>
                                 <option value="">---Passout year---</option>
                                 <option value="2008">2008</option>
                                 <option value="2009">2009</option>
@@ -80,13 +72,12 @@
                                 <option value="2015">2015</option>
                             </select>
                         </div>
-
-
-                        <div class="form-group col-md-3">
-                            <input name="text" class="form-control" ng-model="Register.Percentage12th" placeholder="12th Percentage" readonly />
+                        <div class="form-group col-md-3" ng-class="{ 'has-error': userForm.Percentage12th.$invalid && userForm.Percentage12th.$dirty }">
+                            <input type="tel" name="Percentage12th" class="form-control" ng-model="Register.Percentage12th" placeholder="12th Percentage" required />
                         </div>
-                        <div class="form-group col-md-3">
-                            <select class="form-control" name="PassoutYear12th" ng-model="Register.PassoutYear12th">
+                        <div class="form-group col-md-3" ng-class="{ 'has-error': userForm.PassoutYear12th.$invalid && userForm.PassoutYear12th.$dirty }">
+                            <select class="form-control" name="PassoutYear12th" ng-model="Register.PassoutYear12th" required>
+
                                 <option value="">---Passout year---</option>
                                 <option value="2008">2008</option>
                                 <option value="2009">2009</option>
@@ -97,67 +88,33 @@
                                 <option value="2015">2015</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-12">
-                            <input type="text" class="form-control" ng-model="Register.SchoolName10th" placeholder="10th School Name" />
+                        <div class="form-group col-md-12" ng-class="{ 'has-error': userForm.SchoolName10th.$invalid && userForm.SchoolName10th.$dirty }">
+                            <input type="text" name="SchoolName10th" class="form-control" ng-model="Register.SchoolName10th" placeholder="10th School Name" required />
 
                         </div>
-                        <div class="form-group col-md-12">
-                            <input type="text" class="form-control" ng-model="Register.SchoolName12th" placeholder="12th School Name" />
+                        <div class="form-group col-md-12" ng-class="{ 'has-error': userForm.SchoolName12th.$invalid && userForm.SchoolName12th.$dirty }">
+                            <input type="text" name="SchoolName12th" class="form-control" ng-model="Register.SchoolName12th" placeholder="12th School Name" required />
 
                         </div>
-                        <div class="form-group col-md-3">
-                            <input name="text" class="form-control" placeholder="Stream(your subject)" readonly />
-                        </div>
-                        <div class="form-group col-md-3">
-                            <select class="form-control" name="Stream" ng-model="Register.Stream">
-                                <option value="">---Select Subject---</option>
-                                <option value="Mathematics">Mathematics</option>
-                                <option value="Science">Science</option>
-                                <option value="Commerse">Commerse</option>
-                                <option value="Art">Art</option>
-                                <option value="Math-Science">Math-Science</option>
-                            </select>
-                        </div>
+                      
+                     
 
-
-                        <div class="form-group col-md-3">
-                            <input name="text" class="form-control" placeholder="Adminssion Course" readonly />
-                        </div>
-                        <div class="form-group col-md-3">
-                            <select class="form-control" name="CourseName" ng-model="Register.CourseName">
-                                <option value="">---Prefered Courses---</option>
-                                <option value="B.sc">B.sc</option>
-                                <option value="BCA">BCA</option>
-                                <option value="BA">BA</option>
-                                <option value="B.com">B.Com</option>
-                                <option value="M.com">M.com</option>
-                                <option value="M.sc">M.sc</option>
-
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" ng-model="Register.Pincode" placeholder="Pin Code" />
+                        <div class="form-group col-md-6" ng-class="{ 'has-error': userForm.Pincode.$invalid && userForm.Pincode.$dirty }">
+                            <input type="tel" ng-minlength="5" ng-maxlength="6" class="form-control" ng-model="Register.Pincode" placeholder="Pin Code" required />
                         </div>
 
                         <div class="form-group col-md-3">
                             <input name="text" class="form-control" placeholder="Select City" readonly />
                         </div>
-                        <div class="form-group col-md-3">
-                            <select class="form-control" name="City" ng-model="Register.City">
-                                <option value="">---Select City---</option>
-                                <option value="Indore">Indore</option>
-                                <option value="Bhopal">Bhopal</option>
-                                <option value="Sihore">Sihore</option>
 
-                            </select>
+                        <div class="form-group col-md-3" ng-class="{ 'has-error': userForm.City.$invalid && userForm.City.$dirty }">
+                            <input name="text" class="form-control" placeholder="Enter your City" ng-model="Register.City" />                    
                         </div>
-                        <div class="form-group col-md-3">
-                          
-                        </div>
+
                     </div>
-                    <div class="footer" style="height: 36px;">
-                        <button type="submit" ng-click="RegisterData(Register)" class="btn bg-olive btn-block">Save & Next</button>               
+                    <div class="footer" style="height: 66px;">
+                        <button type="submit" ng-disabled="userForm.$invalid" ng-click="UpdateStudentData(Register)" class="btn bg-olive btn-block">Sign me up</button>
+
                     </div>
                 </form>
               
