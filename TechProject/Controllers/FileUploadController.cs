@@ -27,11 +27,15 @@ namespace TechProject.Controllers
             Helper helper = new Helper();
             if (HttpContext.Current.Request.Files.AllKeys.Any())
             {
+                bool exists = System.IO.Directory.Exists(HttpContext.Current.Server.MapPath("~/UploadedFiles/AdminData/ExcelUpload"));
+
+                if (!exists)
+                    System.IO.Directory.CreateDirectory(HttpContext.Current.Server.MapPath("~/UploadedFiles/AdminData/ExcelUpload"));
                 // Get the uploaded image from the Files collection
                 var httpPostedFile = HttpContext.Current.Request.Files["StudentFile"];
                 if (httpPostedFile != null)
                 {
-                    var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/UploadedFiles"), httpPostedFile.FileName);
+                    var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/UploadedFiles/AdminData/ExcelUpload"), httpPostedFile.FileName);
                     httpPostedFile.SaveAs(fileSavePath);
                     FileStream stream = File.Open(fileSavePath, FileMode.Open, FileAccess.Read);
 

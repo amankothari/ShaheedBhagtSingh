@@ -47,3 +47,4 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.pdb
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7oct1.resources
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._11oct.resources
