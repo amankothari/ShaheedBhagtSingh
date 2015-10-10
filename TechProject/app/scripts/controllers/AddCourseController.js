@@ -2,6 +2,11 @@
 Myapp.controller('AddCourseController', ['$scope', '$http', function ($scope, $http) {
     console.log("Add Course  Controller is loading...");
 
+    $scope.showModal = false;
+    $scope.toggleModal = function () {
+        $scope.showModal = !$scope.showModal;
+    };
+
     $scope.AddCourse = function (Course) {
         console.log("Add Course data");
         console.log(Course);

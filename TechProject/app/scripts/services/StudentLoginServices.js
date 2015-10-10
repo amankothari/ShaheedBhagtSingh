@@ -1,18 +1,17 @@
 ﻿'use strict';
-Myapp.factory('StudentLoginServices', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
+Myapp.factory('StudentLoginServices', ['$http', function ($http) {
 
-    var serviceBase = ngAuthSettings.apiServiceBaseUri;
 
     var loginServicesFactory = {};
 
-    var _Getlogin = function () {
-        console.log("in login Service Factory")
-        return $http.get(serviceBase + 'api/itemMaster').then(function (results) {
+    var _GetStudentlogin = function () {
+        console.log("in Student login Service Factory")
+        return $http.get('http://localhost:49753/api/stquery/all').then(function (results) {
             return results;
         });
     };
 
-    loginServicesFactory.Getlogin = _Getlogin;
+    loginServicesFactory.GetStudentlogin = _GetStudentlogin;
 
 
 

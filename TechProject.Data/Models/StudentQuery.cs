@@ -25,7 +25,10 @@ namespace TechProject.Data.Models
         [EnumDataType(typeof(Sex))]
         public Sex Gender { get; set; }
         [Column(TypeName = "nvarchar")]
+<<<<<<< HEAD
         [StringLength(100)]
+=======
+>>>>>>> a993972d83a75cb2c65e70912b32d58a143ebf35
         public string MobileNumber { get; set; }
         [Column(TypeName = "nvarchar")]
         [StringLength(256)]

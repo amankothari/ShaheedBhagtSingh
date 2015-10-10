@@ -2,7 +2,7 @@
 <script src="app/assets/js/jquery-1.11.2.min.js"></script>
 <div class="skin-blue">
     <section data-ng-include="'app/views/Admin/Header.html'"></section>
-    <div class="wrapper row-offcanvas row-offcanvas-left">
+    <div >
         <section data-ng-include=" 'app/views/Admin/nav.html' "></section>
         <aside class="right-side">
             <!-- Content Header (Page header) -->
@@ -28,17 +28,17 @@
 
                 <div class="form-box" id="login-box" style="width: 85%; margin: 37px auto 0 auto; ">
 
-                    <form>
-                        <div class="body bg-gray" style="height: 400px;">
-                            <div class="form-group col-md-offset-3 col-md-6">
-                                <input type="text" class="form-control" ng-model="CourseData.CourseName" placeholder="Enter Course Name" />
+                    <form name="userForm" novalidate>
+                        <div class="panel-body bg-gray">
+                            <div class="form-group col-md-offset-3 col-md-6" ng-class="{ 'has-error': userForm.CourseName.$invalid && userForm.CourseName.$dirty }">
+                                <input type="text" name="CourseName" class="form-control" ng-model="CourseData.CourseName" placeholder="Enter Course Name" required />
                             </div>
 
                             <div class="form-group col-md-offset-3 col-md-3">
                                 <input class="form-control" placeholder="Course Duration" readonly />
                             </div>
-                            <div class="form-group col-md-3">
-                                <select class="form-control" name="Duration" ng-model="CourseData.Duration">
+                            <div class="form-group col-md-3" ng-class="{ 'has-error': userForm.Duration.$invalid && userForm.Duration.$dirty }">
+                                <select class="form-control" name="Duration" ng-model="CourseData.Duration" required>
                                     <option value="">---Select Duration---</option>
                                     <option value="1">1 Year</option>
                                     <option value="2">2 Year</option>
@@ -48,14 +48,14 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-offset-3 col-md-6">
-                                <input type="text" class="form-control" ng-model="CourseData.CourseFee" placeholder="Enter Course Fee" />
+                            <div class="form-group col-md-offset-3 col-md-6" ng-class="{ 'has-error': userForm.CourseFee.$invalid && userForm.CourseFee.$dirty }">
+                                <input type="text" class="form-control" ng-model="CourseData.CourseFee" placeholder="Enter Course Fee" required/>
                             </div>
 
-                            <div class="form-group col-md-offset-3 col-md-3">
+                            <div class="form-group col-md-offset-3 col-md-3" >
                                 <input class="form-control" placeholder="Number Of Semester" readonly />
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-3" ng-class="{ 'has-error': userForm.NumberOfsemester.$invalid && userForm.NumberOfsemester.$dirty }">
                                 <select class="form-control" name="NumberOfsemester" ng-model="CourseData.NumberOfsemester">
                                     <option value="">---Select Semester---</option>
                                     <option value="1">1 Semester</option>
@@ -68,52 +68,22 @@
                                     <option value="8">8 Semester</option>
                                 </select>
                             </div>
-
-                     
-
-
-                            <!--<div class="form-group col-md-3">
-                                <input name="text" class="form-control" placeholder="Adminssion Course" readonly />
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select class="form-control" name="CourseName" ng-model="Register.CourseName">
-                                    <option value="">---Prefered Courses---</option>
-                                    <option value="B.sc">B.sc</option>
-                                    <option value="BCA">BCA</option>
-                                    <option value="BA">BA</option>
-                                    <option value="B.com">B.Com</option>
-                                    <option value="M.com">M.com</option>
-                                    <option value="M.sc">M.sc</option>
-
-                                </select>
-                            </div>-->
-
-                            <!--<div class="form-group col-md-6">
-                                <input type="text" class="form-control" ng-model="Register.Pincode" placeholder="Pin Code" />
-                            </div>
-
-                            <div class="form-group col-md-3">
-                                <input name="text" class="form-control" placeholder="Select City" readonly />
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select class="form-control" name="City" ng-model="Register.City">
-                                    <option value="">---Select City---</option>
-                                    <option value="Indore">Indore</option>
-                                    <option value="Bhopal">Bhopal</option>
-                                    <option value="Sihore">Sihore</option>
-
-                                </select>
-                            </div>-->
-                          
                         </div>
-                        <div class="footer" style="height: 40px;">
-                            <button type="submit" ng-click="AddCourse(CourseData)" class="btn bg-olive btn-block">Generate Course</button>
+                        <div class="footer" style="height: 45px;">
+                            <button type="submit" ng-click="AddCourse(CourseData)" ng-disabled="userForm.$invalid" class="btn bg-olive btn-block">Generate Course</button>
                         </div>
                     </form>
 
                 </div>
 
+                
             </section><!-- /.content -->
         </aside>
+
+
+
+        
     </div>
+
+    
 </div>
