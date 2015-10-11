@@ -49,7 +49,7 @@ namespace TechProject.Data
         {
             try
             {
-                return _context.Courses.Where(x=>x.CourseId== CourseId).FirstOrDefault();
+                return _context.Courses.Where(x => x.CourseId == CourseId).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -68,7 +68,7 @@ namespace TechProject.Data
             {
                 courseObj.CreatedDate = DateTime.Now;
                 courseObj.ModifiedDate = DateTime.Now;
-                Courses newcourse =_context.Courses.Add(courseObj);
+                Courses newcourse = _context.Courses.Add(courseObj);
                 SaveContext();
                 return newcourse;
             }
@@ -88,7 +88,7 @@ namespace TechProject.Data
             try
             {
                 Courses course = _context.Courses.Where(x => x.CourseId == courseObj.CourseId).FirstOrDefault();
-                if(course != null)
+                if (course != null)
                 {
                     course.CourseFee = courseObj.CourseFee;
                     course.CourseName = courseObj.CourseName;
@@ -98,7 +98,8 @@ namespace TechProject.Data
                     _context.Entry(course).State = System.Data.Entity.EntityState.Modified;
                     SaveContext();
                     return true;
-                }return false;
+                }
+                return false;
             }
             catch (Exception)
             {
@@ -315,11 +316,11 @@ namespace TechProject.Data
                 throw;
             }
         }
-        public Login Getlogin(int LoginId)
+        public Login Getlogin(Login obj)
         {
             try
             {
-                return _context.Logins.Where(x => x.LoginId == LoginId).FirstOrDefault();
+                return _context.Logins.Where(x => x.UserName == obj.UserName && x.Password == obj.Password).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -387,7 +388,7 @@ namespace TechProject.Data
         /// Method for save all excel rows in database
         /// </summary>
         /// <param name="Students"></param>
-         public void AddStudentList(IList<Student> Students)
+        public void AddStudentList(IList<Student> Students)
         {
             try
             {
@@ -400,7 +401,7 @@ namespace TechProject.Data
                 throw;
             }
         }
-         public Courses GetCourse(string course)
+        public Courses GetCourse(string course)
         {
             try
             {
@@ -412,7 +413,7 @@ namespace TechProject.Data
                 throw;
             }
         }
-          public Student GetStudentById(string LoginId)
+        public Student GetStudentById(string LoginId)
         {
             try
             {
@@ -424,11 +425,23 @@ namespace TechProject.Data
                 throw;
             }
         }
-          public Student GetStudentlogin(Student std)
+        public List<Student> Getallstudent()
         {
             try
             {
-                var a= _context.Students.Where(x => x.ApplicantID == std.ApplicantID && x.Password==std.Password).FirstOrDefault();
+                return _context.Students.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Student GetStudentlogin(Student std)
+        {
+            try
+            {
+                var a = _context.Students.Where(x => x.ApplicantID == std.ApplicantID && x.Password == std.Password).FirstOrDefault();
                 return a;
             }
             catch (Exception)
@@ -438,7 +451,26 @@ namespace TechProject.Data
             }
         }
 
+        public bool Changepassword(Student std)
+        {
+            try
+            {
+                var a = _context.Students.Where(x => x.ApplicantID == std.ApplicantID && x.Password == std.Password).FirstOrDefault();
+                if(a!=null)
+                {
+                    a.Password = std.Newpassword;
+                    _context.Entry(a).State = System.Data.Entity.EntityState.Modified;
+                    SaveContext();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
 
         public Student UpdateStudentProfile(Student std)
         {
@@ -447,7 +479,6 @@ namespace TechProject.Data
                 Student getstd = _context.Students.Where(x => x.ApplicantID == std.ApplicantID).FirstOrDefault();
                 if (getstd != null)
                 {
-                    getstd.Password = std.Password;
                     getstd.aadharcertURL = std.aadharcertURL;
                     getstd.cert10thURL = std.cert10thURL;
                     getstd.cert12thURL = std.cert12thURL;

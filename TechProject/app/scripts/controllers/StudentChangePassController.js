@@ -8,12 +8,15 @@ Myapp.controller('StudentChangePassController', ['$scope', '$http', 'getsetServi
     $scope.ChangePassData = function (ChangePass) {
         console.log("update Student CHange Password Record");
         console.log(ChangePass);
-        var url = "api/studentlogin";
+        var url = "api/studentlogin/changepasswrd";
         var dataToPost = {
             ApplicantID: $scope.StudentData.ApplicantID,
-            Password: ChangePass.newpass
+            Password: $scope.StudentData.Password,
+            Newpassword: $scope.StudentData.newpass,
+            ConfirmNewpassword: $scope.StudentData.confirmpass
+
         };
-        $http.put(url, dataToPost).success(function (data) {
+        $http.post(url, dataToPost).success(function (data) {
            
             alert("You Have Change Password Succesfully, your password is " + data.Password+ " Kindly save it for the Future use");
             window.location = "Home.html#/Dashboard";

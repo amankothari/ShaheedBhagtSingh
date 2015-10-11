@@ -3,7 +3,7 @@ Myapp.controller('AdminAddStudentController', ['$scope', '$http','FileUploader',
     console.log("Admin Add StudentController is loading...");
 
     $scope.student = [];
-    StudentRegisterServices.Getregister().then(function (results) {
+    StudentRegisterServices.Getallstudent().then(function (results) {
         console.log("gett");
         $scope.student = results.data;
         console.log($scope.student);
@@ -19,7 +19,7 @@ Myapp.controller('AdminAddStudentController', ['$scope', '$http','FileUploader',
     }
 
     function sendFileToServer(formData, status) {
-        var uploadURL = "api/FileUpload/Post"; //Upload URL
+        var uploadURL = "api/FileUpload"; //Upload URL
         var extraData = {}; //Extra Data.
         var jqXHR = $.ajax({
             xhr: function () {
