@@ -45,18 +45,16 @@
             <h3 style="margin-left: 222px; color: white; margin-top: 10px">Shaheed Bhagat Singh College </h3>
 
         </div>
-        <div class="navbar-right">
+        <div class="navbar-right" style="margin-right:0px">
             <ul class="nav navbar-nav">
-
-                <li></li>
-                <!-- User Account: style can be found in dropdown.less -->
-                <li class="dropdown user user-menu">
-                    <button ng-click="SignOut(StudentData)" class="dropdown-toggle" data-toggle="dropdown">
+                <li class="user user-menu">
+                    <a ng-click="SignOut(StudentData)" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="glyphicon glyphicon-user"></i>
                         <span>{{StudentData.Name}}&nbsp; <i class="fa fa-sign-out"></i></span>
-                    </button>
+                    </a>
 
                 </li>
+              
             </ul>
         </div>
     </nav>

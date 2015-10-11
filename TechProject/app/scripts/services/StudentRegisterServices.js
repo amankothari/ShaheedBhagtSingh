@@ -15,6 +15,15 @@ Myapp.factory('StudentRegisterServices', ['$http', 'ngAuthsetting', function ($h
     RegisterServicesFactory.Getregister = _Getregister;
 
 
+    var _GetStudents = function () {
+        console.log("in Student Register Services Factory")
+
+        return $http.get(url + 'api/stquery/all').then(function (results) {
+            return results;
+        });
+    };
+    RegisterServicesFactory.GetStudents = _GetStudents;
+
 
     //var _Putregister = function () {
 

@@ -20,10 +20,11 @@ Myapp.controller('StudentRegisterController', ['$scope', '$http', 'StudentRegist
         //    Password: $scope.Logindata.Password
         //};
         $http.post(url, Register).success(function (data) {
-               console.log(data);
-               console.log("Error Gor Here");
-               console.log(data);
+            console.log(data);
+            alert("You have Register Succesfully, we will contact you on your mobile Number..");
 
+            window.location = "#/index";
+               console.log(data);
                if (data.id == 0) {
 
                    $scope.gotErrors = true;

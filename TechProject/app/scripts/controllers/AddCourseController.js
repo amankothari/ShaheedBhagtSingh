@@ -1,6 +1,9 @@
 ﻿'use strict';
 Myapp.controller('AddCourseController', function ($scope, $http, CourseServices,ngAuthsetting) {
     console.log("Add Course  Controller is loading...");
+
+    var SurviceBase = ngAuthsetting.url;
+
     $scope.showModal = false;
     $scope.EditData = {};
     $scope.Edit = function (getcourse) {
@@ -9,11 +12,22 @@ Myapp.controller('AddCourseController', function ($scope, $http, CourseServices,
         $scope.EditData = getcourse;
         $scope.SaveEditCourse = function (EditData) {
             console.log(EditData);
-          
-
-
-        }
-
+            var url = "api/course";
+            $http.put(url, EditData).success(function (data) {
+                console.log(data);
+              
+                $scope.showModal = !$scope.showModal;
+                
+                console.log(data);
+                if (data.id == 0) {
+                    $scope.gotErrors = true;
+                    if (data[0].exception == "Already") {
+                        console.log("Got This User Already Exist");
+                        $scope.AlreadyExist = true;
+                    }
+                }
+                else { }
+            })}
     };
 
     $scope.GetCourse = [];

@@ -6,6 +6,7 @@ Myapp.controller('AdminAddStudentController', ['$scope', '$http','FileUploader',
     StudentRegisterServices.Getregister().then(function (results) {
         console.log("gett");
         $scope.student = results.data;
+        console.log($scope.student);
     }, function (error) {
 
     });
