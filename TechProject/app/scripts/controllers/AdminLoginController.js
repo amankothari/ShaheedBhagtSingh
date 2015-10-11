@@ -1,13 +1,14 @@
 ﻿'use strict';
 Myapp.controller('AdminLoginController', ['$scope', '$location', 'AdminGetSetService', function ($scope, $location, AdminGetSetService) {
+    $scope.Logindata = {};
     console.log("Admin Login Controller page is loading..."); 
     $scope.AdminLogin = function (Logindata) {
         console.log("Post Admin Data");
-        console.log(data);
-        var url =  "api/admin";
+        console.log(Logindata);
+        var url = "api/login/in";
         var dataToPost = {
-            EmailId: $scope.Logindata.userid,
-            Password: $scope.Logindata.password
+            UserName: Logindata.userid,
+            Password: Logindata.password
         };
         console.log("Succesfully");
         console.log(dataToPost);    

@@ -32,11 +32,11 @@ namespace TechProject.Controllers
                 if (!exists)
                     System.IO.Directory.CreateDirectory(HttpContext.Current.Server.MapPath("~/UploadedFiles/AdminData/ExcelUpload"));
                 // Get the uploaded image from the Files collection
-                var httpPostedFile = HttpContext.Current.Request.Files["StudentFile"];
-                if (httpPostedFile != null)
+               // var httpPostedFile1 = HttpContext.Current.Request.Files["StudentFile"];
+                foreach(var httpPostedFile in HttpContext.Current.Request.Files)
                 {
-                    var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/UploadedFiles/AdminData/ExcelUpload"), httpPostedFile.FileName);
-                    httpPostedFile.SaveAs(fileSavePath);
+                    var fileSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/UploadedFiles/AdminData/ExcelUpload"), HttpContext.Current.Request.Files[httpPostedFile.ToString()].FileName);
+                    HttpContext.Current.Request.Files[httpPostedFile.ToString()].SaveAs(fileSavePath);
                     FileStream stream = File.Open(fileSavePath, FileMode.Open, FileAccess.Read);
 
                     if (fileSavePath.Contains(".xls"))
@@ -71,10 +71,14 @@ namespace TechProject.Controllers
                             sq.AdYear = excelReader[7].ToString();
                             sq.Course = _repo.GetCourse(excelReader[8].ToString());
                             sq.Password= excelReader[3].ToString();
-                            Studentquery.Add(sq);
+                            if (_repo.GetStudentById(sq.ApplicantID) == null)
+                            {
+                                Studentquery.Add(sq);
+                            }
                         }
                         //excelReader.GetInt32(0);
                     }
+                    
                     _repo.AddStudentList(Studentquery);
                     //6. Free resources (IExcelDataReader is IDisposable)
                     excelReader.Close();
