@@ -1,13 +1,13 @@
 ﻿'use strict';
-Myapp.factory('CourseServices', ['$http', function ($http) {
-
+Myapp.factory('CourseServices', function ($http, ngAuthsetting) {
+    var url = ngAuthsetting.url;
     
     var courseServiceFactory = {};
 
     var _Getcourse = function () {
         console.log("in Course Service Factory")
 
-        return $http.get('http://localhost:49753/api/course').then(function (results) {
+        return $http.get(url+'api/course/all').then(function (results) {
             return results;
         });
     };
@@ -39,4 +39,4 @@ Myapp.factory('CourseServices', ['$http', function ($http) {
 
        return courseServiceFactory;
 
-}]);
+});

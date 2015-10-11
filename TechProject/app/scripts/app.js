@@ -130,20 +130,23 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
           //controller: 'StudentDetailsController'
       })
 
-    //// route for the contact page
-    //.when('/contact', {
-    //    templateUrl: 'pages/contact.html',
-    //    controller: 'contactController'
-     //});
-    var serviceBase = 'http://localhost:49753/';
- //var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
+  
  
  });
 
- Myapp.contants('ngAuthsetting', function () {
-     'url'='http://localhost:49753/'
- })
+
+ var serviceBase = 'http://localhost:49753/';
+//var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
+
+
+ Myapp.constant('ngAuthsetting', {
+     url: serviceBase
+ });
+
+
  console.log(Myapp);
+
+
  Myapp.controller('CarouselDemoCtrl', function ($scope) {
      console.log(Myapp);
     $scope.myInterval = 5000;
