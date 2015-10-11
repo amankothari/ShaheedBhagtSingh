@@ -212,19 +212,21 @@
                                     <table class="table table-hover">
                                         <tbody>
                                             <tr>
-                                                <th>Student ID</th>
+                                              
                                                 <th>Student name</th>
-                                                <th>Course type</th>
+                                                <th>Prefered Course</th>
+                                                <th>12th Completed Year</th>
                                                 <th>view</th>                                                
                                             </tr>
                                             <tr ng-repeat="stu in student">
-                                                <td>1</td>
-                                                <td>John Doe</td>
-                                                <td>BCA</td>
+                                              
+                                                <td>{{stu.FirstName}}&nbsp;{{stu.LastName}}</td>
+                                                <td>{{stu.Course}}</td>
+                                                <td>{{stu.PassoutYear12th}}</td>
                                                 <td>
-                                                <span class="label label-success">click</span>
+                                                    <button class="btn btn-primary" ng-click="ViewStudentQuery(stu)">View</button>
                                                 </td>
-                                              </tr>
+                                            </tr>
                                            
                                         </tbody>
                                     </table>
@@ -232,6 +234,50 @@
                             </div><!-- /.box -->
                         </div>
                     </div>
+
+
+
+                    <modal title="Edit Course Details" visible="showModal">
+                        <form name="userForm" novalidate>
+                            <div class="panel-body">
+                                <div class="form-group" ng-class="{ 'has-error': userForm.FirstName.$invalid && userForm.FirstName.$dirty }">
+                                    <label>Full Name </label>
+                                    <input type="text" name="FirstName" value="{{EditData.FirstName}}&nbsp;{{EditData.LastName}}" class="form-control" readonly />
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': userForm.FirstName.$invalid && userForm.FirstName.$dirty }">
+                                    <label>Mobile Number  </label>
+                                    <input type="text" name="FirstName" value="{{EditData.MobileNumber}}" class="form-control" readonly />
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': userForm.FirstName.$invalid && userForm.FirstName.$dirty }">
+                                    <label>Prefered Course  </label>
+                                    <input type="text" name="FirstName" value="{{EditData.Course}}" class="form-control" readonly />
+                                </div>
+
+                                <div class="form-group" ng-class="{ 'has-error': userForm.FirstName.$invalid && userForm.FirstName.$dirty }">
+                                    <label>10th Passout Year  </label>
+                                    <input type="text" name="FirstName" value="{{EditData.PassoutYear10th}}" class="form-control" readonly />
+                                </div>
+
+                                <div class="form-group" ng-class="{ 'has-error': userForm.FirstName.$invalid && userForm.FirstName.$dirty }">
+                                    <label>12th Passout Year  </label>
+                                    <input type="text" name="FirstName" value="{{EditData.PassoutYear12th}}" class="form-control" readonly />
+                                </div>
+
+                                <div class="form-group" ng-class="{ 'has-error': userForm.FirstName.$invalid && userForm.FirstName.$dirty }">
+                                    <label>Gender  </label>
+                                    <input type="text" name="FirstName" value="{{EditData.Gender}}" class="form-control" readonly />
+                                </div>
+
+                                <div class="form-group" ng-class="{ 'has-error': userForm.FirstName.$invalid && userForm.FirstName.$dirty }">
+                                    <label>City </label>
+                                    <input type="text" name="FirstName" value="{{EditData.City}}" class="form-control" readonly />
+                                </div>
+
+
+                                <button type="submit" ng-click="Save(EditData)" class="btn btn-primary">Close</button>
+                            </div>
+                        </form>
+                    </modal>
 
 
                 </section>
