@@ -81,7 +81,7 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
 
          .when('/Admin/Course', {
              templateUrl: 'app/views/Admin/Course.html',
-             controller: 'AdminAddStudentController'
+             controller: 'AddCourseController'
          })
 
          .when('/Admin/AddCourse', {
@@ -140,7 +140,9 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
  
  });
 
- 
+ Myapp.contants('ngAuthsetting', function () {
+     'url'='http://localhost:49753/'
+ })
  console.log(Myapp);
  Myapp.controller('CarouselDemoCtrl', function ($scope) {
      console.log(Myapp);
@@ -166,6 +168,7 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
     ];
  });
 
+ 
  Myapp.directive('modal', function () {
      return {
          template: '<div class="modal fade">' +

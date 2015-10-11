@@ -19,9 +19,11 @@ Myapp.controller('homeController', ['$scope', '$http', '$location', 'getsetServi
             console.log("Succesfully");
             console.log(dataToPost);
             $http.post(url, dataToPost).success(function (data) {
-                console.log(data);
-                alert("Login is succesfully");
+                
                 getsetService.Setdata(data);
+                alert("Login is succesfully");
+                $scope.StudentData = getsetService.GetData();
+                console.log($scope.StudentData);
                 window.location = "Home.html#/Dashboard";
                 console.log(data);
                 if (data.id == 0) {

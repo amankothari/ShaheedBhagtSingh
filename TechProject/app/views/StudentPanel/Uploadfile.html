@@ -21,22 +21,24 @@
             <!-- Main content -->     
             <div >
                 <div class="panel panel-default">
-                    <div class="panel-heading"><strong>Upload 10th Marksheet</strong> <small></small></div>
-                    <div class="panel-body">
-                    
-                       
+                    <div class="panel-heading"><strong>Upload Your Marksheet</strong> <small></small></div>
+                    <div class="panel-body">  
                         <form>
                             <div class="form-group">
-                                <div class="col-md-offset-3" ng-repeat="step in stepsModel">
-                                    <img style="width:225px" class="thumb" ng-src="{{step}}" /><br />
-                                    <button name="Delete">Delete</button>
+                                <div class="col-md-3" ng-repeat="step in stepsModel">
+                                    <img style="width:225px; height:200px" class="thumb" ng-src="{{step}}" /><br /><br />
+                                    <button class="btn-default" ng-click="Delete(step)" name="Delete">Delete</button>
                                 </div>
                             </div>
-                            <h4>Select files from your computer</h4>
-                                <div class="form-group">
-                                    <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
-                                </div>
-                              
+                          
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><strong>Upload 10th Marksheet</strong> <small></small></div>
+                    <div class="panel-body">
+                        <form>
+                          
                             <h4>Select files from your computer</h4>
                             <div class="form-group">
                                 <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
@@ -44,8 +46,7 @@
                         </form>
                     </div>
                 </div>
-
-                <!--<div class="panel panel-default">
+                <div class="panel panel-default">
                     <div class="panel-heading"><strong>Upload 12th Marksheet</strong> <small></small></div>
                     <div class="panel-body">
 
@@ -55,7 +56,7 @@
                                 <div class="form-group">
                                     <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
                                 </div>
-                                <button type="submit" class="btn btn-sm btn-primary">Upload files</button>
+                            
                             </div>
                         </form>
                     </div>
@@ -70,7 +71,7 @@
                                 <div class="form-group">
                                     <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
                                 </div>
-                                <button type="submit" class="btn btn-sm btn-primary">Upload files</button>
+                          
                             </div>
                         </form>
                     </div>
@@ -87,13 +88,22 @@
                                 </div>
                                
                             </div>
-                            <div ng-repeat="step in stepsModel">
-                                <img style="width:225px" class="thumb" ng-src="{{step}}" />
-                            </div>
+                          
                         </form>
                     </div>
-                </div>-->
+                  
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><strong>Save </strong> <small></small></div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-inline">
+                                <button class="btn badge-primary">Upload All Document</button>
+                            </div>
 
+                        </form>
+                    </div>
+                </div>
 
 
             </div> <!-- /container -->

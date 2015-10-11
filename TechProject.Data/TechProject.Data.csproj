@@ -52,9 +52,9 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Generic.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Migrations\201510102025235_oct11.cs" />
-    <Compile Include="Migrations\201510102025235_oct11.Designer.cs">
-      <DependentUpon>201510102025235_oct11.cs</DependentUpon>
+    <Compile Include="Migrations\201510102041187_College.cs" />
+    <Compile Include="Migrations\201510102041187_College.Designer.cs">
+      <DependentUpon>201510102041187_College.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -74,8 +74,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510102025235_oct11.resx">
-      <DependentUpon>201510102025235_oct11.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510102041187_College.resx">
+      <DependentUpon>201510102041187_College.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
