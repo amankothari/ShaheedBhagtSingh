@@ -274,6 +274,9 @@ C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.csprojResolveAssemblyReference.cache
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.dll
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.pdb
+C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\Excel.4.5.dll
+C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\Excel.dll
+C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\ICSharpCode.SharpZipLib.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\TechProject.dll.config
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\TechProject.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\TechProject.pdb
@@ -324,6 +327,3 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\bin\System.Web.WebPages.Ra
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject\obj\Debug\TechProject.pdb
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\Excel.4.5.dll
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\Excel.dll
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject\bin\ICSharpCode.SharpZipLib.dll

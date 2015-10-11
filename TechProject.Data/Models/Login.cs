@@ -19,8 +19,8 @@ namespace TechProject.Data.Models
         [Column(TypeName = "nvarchar")]
         [StringLength(256)]
         public string Email { get; set; }
-        [Column(TypeName = "bigint")]
-        public int Mobile { get; set; }
+        [Column(TypeName = "nvarchar")]
+        public string Mobile { get; set; }
         [Column(TypeName = "nvarchar")]
         [StringLength(256)]
         public string Password { get; set; }
@@ -33,7 +33,6 @@ namespace TechProject.Data.Models
     }
     public enum LoginType
     {
-        Student,
         Admin,
         Staff,
         Faculty
