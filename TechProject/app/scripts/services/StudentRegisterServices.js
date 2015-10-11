@@ -1,13 +1,13 @@
 ﻿'use strict';
-Myapp.factory('StudentRegisterServices', ['$http', function ($http) {
+Myapp.factory('StudentRegisterServices', ['$http', 'ngAuthsetting', function ($http, ngAuthsetting) {
 
-   
+    var url = ngAuthsetting.url;
     var RegisterServicesFactory = {};
 
     var _Getregister = function () {
         console.log("in Student Register Services Factory")
 
-        return $http.get('http://localhost:49753/api/stquery/all').then(function (results) {
+        return $http.get(url + 'api/stquery/all').then(function (results) {
             return results;
         });
     };

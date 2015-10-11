@@ -447,6 +447,7 @@ namespace TechProject.Data
                 Student getstd = _context.Students.Where(x => x.ApplicantID == std.ApplicantID).FirstOrDefault();
                 if (getstd != null)
                 {
+                    getstd.Password = std.Password;
                     getstd.aadharcertURL = std.aadharcertURL;
                     getstd.cert10thURL = std.cert10thURL;
                     getstd.cert12thURL = std.cert12thURL;
