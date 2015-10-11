@@ -60,20 +60,22 @@
                                 <table class="table table-hover">
                                     <tbody>
                                         <tr>
-                                            <th>Admission Id</th>
-                                            <th>Student Name</th>
-                                            <th>Course</th>
+                                            <th>Course Id</th>
+                                            <th>Course Name</th>
+                                            <th>Duration</th>
                                             <th>Semester</th>
-                                            <th>Start Year</th>
+                                            <th>Fee</th>
+                                            <th>Created Date</th>
                                             <th>View</th>
                                         </tr>
-                                        <tr>
-                                            <td>183</td>
-                                            <td>John Doe</td>
-                                            <td>BCA</td>
-                                            <td>3rd </td>
-                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                            <td><span class="label label-success"><button ng-click="toggleModal()" class="btn btn-default">Open modal</button></span></td>
+                                        <tr ng-repeat="getcourse in GetCourse">
+                                            <td>{{getcourse.CourseId}}</td>
+                                            <td>{{getcourse.CourseName}}</td>
+                                            <td>{{getcourse.Duration}}</td>
+                                            <td>{{getcourse.NumberOfsemester}} </td>
+                                            <td>{{getcourse.CourseFee}}</td>
+                                            <td>{{getcourse.CreatedDate}}</td>
+                                            <td><span><button ng-click="Edit(getcourse)" class="btn btn-primary">Edit</button></span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -81,17 +83,29 @@
                         </div><!-- /.box -->
                     </div>
                 </div>  
-                    <modal title="Login form" visible="showModal">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" />
+                    <modal title="Edit COurse Details" visible="showModal">
+                        <form name="userForm" novalidate>
+                            <div class="panel-body">
+                                <div class="form-group" ng-class="{ 'has-error': userForm.CourseName.$invalid && userForm.CourseName.$dirty }">
+                                    <label>Course Name</label>
+                                    <input type="text" name="CourseName" ng-model="EditData.CourseName" value="{{EditData.CourseName}}" class="form-control" required />
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': userForm.Duration.$invalid && userForm.Duration.$dirty }">
+                                    <label>Course Duration </label>
+                                    <input type="text" class="form-control" name="Duration" ng-model="EditData.Duration" value="{{EditData.Duration}}" required />
+                                </div>
+
+                                <div class="form-group" ng-class="{ 'has-error': userForm.NumberOfsemester.$invalid && userForm.NumberOfsemester.$dirty }">
+                                    <label>Number Of semester </label>
+                                    <input type="text" class="form-control" name="NumberOfsemester" ng-model="EditData.NumberOfsemester" value="{{EditData.NumberOfsemester}}" required />
+                                </div>
+
+                                <div class="form-group" ng-class="{ 'has-error': userForm.CourseFee.$invalid && userForm.CourseFee.$dirty }">
+                                    <label>Course Fee </label>
+                                    <input type="text" class="form-control" name="CourseFee" ng-model="EditData.CourseFee" value="{{EditData.CourseFee}}" required />
+                                </div>
+                                <button type="submit" ng-disabled="userForm.$invalid" ng-click="SaveEditCourse(EditData)" class="btn btn-primary">Submit</button>
                             </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Password" />
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
                         </form>
                     </modal>
             </section><!-- /.content -->

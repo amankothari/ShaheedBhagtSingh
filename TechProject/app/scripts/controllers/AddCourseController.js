@@ -1,16 +1,26 @@
 ﻿'use strict';
 Myapp.controller('AddCourseController', function ($scope, $http, CourseServices,ngAuthsetting) {
     console.log("Add Course  Controller is loading...");
-    console.log(ngAuthsetting);
     $scope.showModal = false;
-    $scope.toggleModal = function () {
+    $scope.EditData = {};
+    $scope.Edit = function (getcourse) {
         $scope.showModal = !$scope.showModal;
+        console.log(getcourse);
+        $scope.EditData = getcourse;
+        $scope.SaveEditCourse = function (EditData) {
+            console.log(EditData);
+          
+
+
+        }
+
     };
 
     $scope.GetCourse = [];
     CourseServices.Getcourse().then(function (results) {
         console.log("gett");
         $scope.GetCourse = results.data;
+        console.log($scope.GetCourse);
     }, function (error) {
 
     });

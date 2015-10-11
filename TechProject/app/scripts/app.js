@@ -127,7 +127,7 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
      })
       .when('/Changepassword', {
           templateUrl: '/app/views/StudentPanel/Changepassword.html',
-          //controller: 'StudentDetailsController'
+          controller: 'StudentChangePassController'
       })
 
   

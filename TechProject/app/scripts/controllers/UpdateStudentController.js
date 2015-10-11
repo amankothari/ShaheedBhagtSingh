@@ -3,13 +3,7 @@ Myapp.controller('UpdateStudentController', ['$scope', '$http', 'getsetService',
     console.log("Student Register 1111 Controller is loading...");
 
       $scope.Loginstudent =  getsetService.GetData();
-    //[];
-    //StudentLoginServices.GetStudentlogin().then(function (results) {
-    //    console.log("gett");
-    //    $scope.Loginstudent = results.data;
-    //}, function (error) {
-
-    //});
+   
 
     $scope.UpdateStudentData = function (Register) {
         console.log("Add Register data");

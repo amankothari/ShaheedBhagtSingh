@@ -1,8 +1,6 @@
 ﻿'use strict';
-Myapp.controller('AdminLoginController', ['$scope', '$location', function ($scope, $location) {
-    console.log("Admin Login Controller page is loading...");
-   
-  
+Myapp.controller('AdminLoginController', ['$scope', '$location', 'AdminGetSetService', function ($scope, $location, AdminGetSetService) {
+    console.log("Admin Login Controller page is loading..."); 
     $scope.AdminLogin = function (Logindata) {
         console.log("Post Admin Data");
         console.log(data);
@@ -12,14 +10,12 @@ Myapp.controller('AdminLoginController', ['$scope', '$location', function ($scop
             Password: $scope.Logindata.password
         };
         console.log("Succesfully");
-        console.log(dataToPost);
-        $Location.url = "#/Admin/Dashboard";
-
+        console.log(dataToPost);    
         $http.post(url, dataToPost)
         .success(function (data) {
             console.log(data);
-            console.log("Error Gor Here");
-            console.log(data);
+            AdminGetSetService.Setdata(data);
+            $Location.url = "#/Admin/Dashboard";
             if (data.id == 0) {
                 $scope.gotErrors = true;
                 if (data[0].exception == "Already") {
@@ -27,14 +23,13 @@ Myapp.controller('AdminLoginController', ['$scope', '$location', function ($scop
                     $scope.AlreadyExist = true;
                 }
             }
-            else {
+            else
+            {
             }
-
         })
          .error(function (data) {
-             console.log("Error Got Heere is ");
-             console.log(data);
-
+             alert("Your User id or Password is not match ");
+             console.log("Error Got Heere is ");        
          })
     };
 }]);

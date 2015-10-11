@@ -42,6 +42,12 @@
                             <h4>Select files from your computer</h4>
                             <div class="form-group">
                                 <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
+
+                                <div class="form-inline">
+                                    <button class="btn btn-primary" ng-click="Save(event)" name="Delete">Save</button>
+                                </div>
+
+                               
                             </div>
                         </form>
                     </div>
@@ -104,7 +110,6 @@
                         </form>
                     </div>
                 </div>
-
 
             </div> <!-- /container -->
         </aside>
