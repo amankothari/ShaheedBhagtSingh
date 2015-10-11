@@ -59,3 +59,4 @@ C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProje
 C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.removebigint.resources
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._11final.resources

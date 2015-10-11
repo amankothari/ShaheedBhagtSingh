@@ -52,9 +52,9 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Generic.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Migrations\201510111226226_removebigint.cs" />
-    <Compile Include="Migrations\201510111226226_removebigint.Designer.cs">
-      <DependentUpon>201510111226226_removebigint.cs</DependentUpon>
+    <Compile Include="Migrations\201510111854418_11final.cs" />
+    <Compile Include="Migrations\201510111854418_11final.Designer.cs">
+      <DependentUpon>201510111854418_11final.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -74,8 +74,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510111226226_removebigint.resx">
-      <DependentUpon>201510111226226_removebigint.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510111854418_11final.resx">
+      <DependentUpon>201510111854418_11final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

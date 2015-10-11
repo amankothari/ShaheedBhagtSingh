@@ -32,7 +32,7 @@ namespace TechProject.Controllers
 
         [Route("")]
         [HttpPost]
-        public HttpResponseMessage addloginDetail(Student Student)
+        public HttpResponseMessage GetstudentLogin(Student Student)
         {
             try
             {
@@ -110,6 +110,35 @@ namespace TechProject.Controllers
             }
         }
 
+        [Route("changepasswrd")]
+        [HttpPost]
+        public HttpResponseMessage changepasswrd(Student Student)
+        {
+            try
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.Changepassword(Student));
+            }
+            catch (Exception ex)
+            {
 
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+        }
+
+
+        [Route("all")]
+        [HttpGet]
+        public HttpResponseMessage Getstudentdetail()
+        {
+            try
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.Getallstudent());
+            }
+            catch (Exception)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+        }
     }
 }

@@ -44,7 +44,25 @@ namespace TechProject.Data.Models
         public string domicilecertURL { get; set; }
         public string aadharcertURL { get; set; }
 
+
+        [Required(ErrorMessage = "Password is required")]
+        [StringLength(255, ErrorMessage = "Must be between 5 and 255 characters", MinimumLength = 5)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
+      
+
+        
+        [StringLength(255, ErrorMessage = "Must be between 5 and 255 characters", MinimumLength = 5)]
+        [DataType(DataType.Password)]
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public string Newpassword { get; set; }
+
+       
+        [StringLength(255, ErrorMessage = "Must be between 5 and 255 characters", MinimumLength = 5)]
+        [DataType(DataType.Password)]
+        [Compare("Newpassword")]
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public string ConfirmNewpassword { get; set; }
 
         public DateTime? CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }

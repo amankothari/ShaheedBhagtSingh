@@ -7,13 +7,13 @@ namespace TechProject.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class removebigint : IMigrationMetadata
+    public sealed partial class _11final : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(removebigint));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_11final));
         
         string IMigrationMetadata.Id
         {
-            get { return "201510111226226_removebigint"; }
+            get { return "201510111854418_11final"; }
         }
         
         string IMigrationMetadata.Source
