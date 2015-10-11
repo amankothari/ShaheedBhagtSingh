@@ -1,8 +1,8 @@
-﻿'use strict';
+'use strict';
 Myapp.controller('UpdateStudentController', ['$scope', '$http', 'getsetService', 'StudentLoginServices', function ($scope, $http, getsetService, StudentLoginServices) {
     console.log("Student Register 1111 Controller is loading...");
 
-      $scope.Loginstudent =  getsetService.Getdata();
+      $scope.Loginstudent =  getsetService.GetData();
     //[];
     //StudentLoginServices.GetStudentlogin().then(function (results) {
     //    console.log("gett");
@@ -14,7 +14,7 @@ Myapp.controller('UpdateStudentController', ['$scope', '$http', 'getsetService',
     $scope.UpdateStudentData = function (Register) {
         console.log("Add Register data");
         console.log(Register);
-        var url = "api/login";
+        var url = "api/studentlogin";
         //var dataToPost = {
         //    EmailId: $scope.Logindata.userid,
         //    Password: $scope.Logindata.Password
