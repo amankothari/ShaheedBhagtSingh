@@ -315,11 +315,11 @@ namespace TechProject.Data
                 throw;
             }
         }
-        public Login Getlogin(int LoginId)
+        public Login Getlogin(Login obj)
         {
             try
             {
-                return _context.Logins.Where(x => x.LoginId == LoginId).FirstOrDefault();
+                return _context.Logins.Where(x => x.UserName == obj.UserName && x.Password==obj.Password).FirstOrDefault();
             }
             catch (Exception)
             {

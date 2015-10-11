@@ -44,7 +44,7 @@ namespace TechProject.Data
 
         #region Login
         List<Login> GetAllLogins();
-        Login Getlogin(int loginId);
+        Login Getlogin(Login obj);
         Login Addlogin(Login loginObj);
         bool Updatelogin(Login loginObj);
         bool Deletelogin(int loginId);

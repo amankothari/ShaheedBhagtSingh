@@ -13,15 +13,15 @@ namespace TechProject.Controllers
     public class LoginController : ApiController
     {
         Repository _repo = new Repository(new DataContext());
-        [Route("")]
-        [HttpGet]
-        public HttpResponseMessage Getlogindetail(int id)
+        [Route("in")]
+        [HttpPost]
+        public HttpResponseMessage Getlogindetail(Login login)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _repo.Getlogin(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _repo.Getlogin(login));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
