@@ -21,9 +21,13 @@ namespace TechProject.Data.Models
         public int CourseFee { get; set; }
         [Column(TypeName = "int")]
         public int NumberOfsemester { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(5000)]
+        public string Description { get; set; }
 
-        public DateTime CreatedDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+        
         public bool Isdeleted { get; set; }
     }
 }

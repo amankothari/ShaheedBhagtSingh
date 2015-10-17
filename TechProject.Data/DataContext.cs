@@ -30,5 +30,7 @@ namespace TechProject.Data
         public DbSet<Login> Logins { get; set; }
         public DbSet<Courses> Courses { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Faculty> Faculties { get; set; }
     }
 }
