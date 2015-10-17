@@ -78,6 +78,20 @@ namespace TechProject.Data
                 throw;
             }
         }
+
+        public Courses GetCourse(string course)
+        {
+            try
+            {
+                return _context.Courses.Where(x => x.CourseName == course).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         /// <summary>
         /// update course using thie method
         /// </summary>
@@ -163,9 +177,11 @@ namespace TechProject.Data
         {
             try
             {
-                Admin newAdminobj = _context.Admins.Add(Adminobj);
+                Adminobj.CreatedDate = DateTime.Now;
+                Adminobj.ModifiedDate = DateTime.Now;
+                _context.Admins.Add(Adminobj);
                 SaveContext();
-                return newAdminobj;
+                return Adminobj;
             }
             catch (Exception)
             {
@@ -332,9 +348,11 @@ namespace TechProject.Data
         {
             try
             {
-                Login Loginnew = _context.Logins.Add(LoginObj);
+                LoginObj.CreatedDate = DateTime.Now;
+                LoginObj.ModifiedDate = DateTime.Now;
+                _context.Logins.Add(LoginObj);
                 SaveContext();
-                return Loginnew;
+                return LoginObj;
             }
             catch (Exception)
             {
@@ -401,18 +419,7 @@ namespace TechProject.Data
                 throw;
             }
         }
-        public Courses GetCourse(string course)
-        {
-            try
-            {
-                return _context.Courses.Where(x => x.CourseName == course).FirstOrDefault();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+       
         public Student GetStudentById(string LoginId)
         {
             try
@@ -456,7 +463,7 @@ namespace TechProject.Data
             try
             {
                 var a = _context.Students.Where(x => x.ApplicantID == std.ApplicantID && x.Password == std.Password).FirstOrDefault();
-                if(a!=null)
+                if (a != null)
                 {
                     a.Password = std.Newpassword;
                     _context.Entry(a).State = System.Data.Entity.EntityState.Modified;
@@ -498,6 +505,202 @@ namespace TechProject.Data
         }
         #endregion
 
+        #region Faculty
+       public List<Faculty> GetAllFaculties()
+        {
+            try
+            {
+                return _context.Faculties.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Faculty GetFaculty(int FacultyId)
+        {
+            try
+            {
+                return _context.Faculties.Where(x => x.FacultyId == FacultyId).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+       public Faculty AddFaculty(Faculty FacultyObj)
+        {
+            try
+            {
+                Faculty faculty = _context.Faculties.Where(x => x.Name == FacultyObj.Name).FirstOrDefault();
+                if (faculty == null)
+                {
+                    faculty.CreatedDate = DateTime.Now;
+                    faculty.ModifiedDate = DateTime.Now;
+                    _context.Faculties.Add(FacultyObj);
+                    _context.SaveChangesAsync();
+                    return faculty;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+       public bool UpdateFaculty(Faculty FacultyObj)
+        {
+            try
+            {
+                Faculty faculty = _context.Faculties.Where(x => x.FacultyId == FacultyObj.FacultyId).FirstOrDefault();
+                if (faculty != null)
+                {
+                    faculty.Name = FacultyObj.Name;
+                    faculty.Address = FacultyObj.Address;
+                    faculty.City = FacultyObj.City;
+                    faculty.Country = FacultyObj.Country;
+                    faculty.Department = FacultyObj.Department;
+                    faculty.Designation = FacultyObj.Designation;
+                    faculty.DOB = FacultyObj.DOB;
+                    faculty.Education = FacultyObj.Education;
+                    faculty.EducationType = FacultyObj.EducationType;
+                    faculty.Email = FacultyObj.Email;
+                    faculty.Gender = FacultyObj.Gender;
+                    faculty.HomeContact = FacultyObj.HomeContact;
+                    faculty.JobType = FacultyObj.JobType;
+                    faculty.JoiningDate = FacultyObj.JoiningDate;
+                    faculty.ModifiedDate = DateTime.Now;
+                    faculty.PermanentAddress = FacultyObj.PermanentAddress;
+                    faculty.PermanentCity = FacultyObj.PermanentCity;
+                    faculty.PermanentPostalCode = FacultyObj.PermanentPostalCode;
+                    faculty.PermanentState = FacultyObj.PermanentState;
+                    faculty.PersonalContact = FacultyObj.PersonalContact;
+                    faculty.PostalCode = FacultyObj.PostalCode;
+                    faculty.SO = FacultyObj.SO;
+                    faculty.State = FacultyObj.State;
+                    _context.Entry(faculty).State = System.Data.Entity.EntityState.Modified;
+                    _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public bool DeleteFaculty(int FacultyId)
+        {
+            try
+            {
+                Faculty faculty = _context.Faculties.Where(x => x.FacultyId == FacultyId).FirstOrDefault();
+                if (faculty != null)
+                {
+                    _context.Entry(faculty).State = System.Data.Entity.EntityState.Deleted;
+                    _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
+
+        #region Department
+
+        public List<Department> GetallDepartments()
+        {
+            try
+            {
+                return _context.Departments.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Department GetDepartment(int DepartmentId)
+        {
+            try
+            {
+                return _context.Departments.Where(x => x.DepartmentId == DepartmentId).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Department AddDepartment(Department DepartmentObj)
+        {
+            try
+            {
+                Department dp = _context.Departments.Where(x => x.Name == DepartmentObj.Name).FirstOrDefault();
+                if (dp == null)
+                {
+                    dp.CreatedDate = DateTime.Now;
+                    dp.ModifiedDate = DateTime.Now;
+                    _context.Departments.Add(DepartmentObj);
+                    _context.SaveChangesAsync();
+                    return dp;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public bool UpdateDepartment(Department DepartmentObj)
+        {
+            try
+            {
+                Department dp = _context.Departments.Where(x => x.DepartmentId == DepartmentObj.DepartmentId).FirstOrDefault();
+                if (dp != null)
+                {
+                    dp.Name = DepartmentObj.Name;
+                    dp.ModifiedDate = DateTime.Now;
+                    _context.Entry(dp).State = System.Data.Entity.EntityState.Modified;
+                    _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public bool DeleteDepartment(int DepartmentId)
+        {
+            try
+            {
+                Department dp = _context.Departments.Where(x => x.DepartmentId == DepartmentId).FirstOrDefault();
+                if (dp != null)
+                {
+                    _context.Entry(dp).State = System.Data.Entity.EntityState.Deleted;
+                    _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
 
         public void SaveContext()
         {

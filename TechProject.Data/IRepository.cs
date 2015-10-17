@@ -54,5 +54,20 @@ namespace TechProject.Data
         void AddStudentList(IList<Student> Students);
         Courses GetCourse(string course);
         #endregion
+
+        #region Deparment
+        List<Department> GetallDepartments();
+        Department GetDepartment(int Departmentobj);
+        Department AddDepartment(Department DepartmentObj);
+        bool UpdateDepartment(Department DepartmentObj);
+        bool DeleteDepartment(int DepartmentId);
+        #endregion
+        #region Faculty
+        List<Faculty> GetAllFaculties();
+        Faculty GetFaculty(int Facultyobj);
+        Faculty AddFaculty(Faculty FacultyObj);
+        bool UpdateFaculty(Faculty FacultyObj);
+        bool DeleteFaculty(int FacultyId);
+        #endregion
     }
 }

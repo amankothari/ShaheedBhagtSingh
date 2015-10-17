@@ -1,40 +1,3 @@
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\TechProject.Data.dll.config
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\TechProject.Data.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\TechProject.Data.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\EntityFramework.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\TechProject.Model.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\TechProject.Model.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\EntityFramework.xml
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\obj\Debug\TechProject.Data.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\obj\Debug\TechProject.Data.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\obj\Debug\TechProject.Data.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\obj\Debug\TechProject.Data.Migrations.demo.resources
-C:\Users\user\Documents\Visual Studio 2015\Projects\TechProject\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.csprojResolveAssemblyReference.cache
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.dll
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.pdb
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\TechProject.Data.dll.config
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\TechProject.Data.dll
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\TechProject.Data.pdb
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework.dll
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework.xml
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
-C:\Users\Aman-pc\Desktop\InitialBuild\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.dll.config
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.dll
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.pdb
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.dll
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.xml
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csprojResolveAssemblyReference.cache
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.dll
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.pdb
-<<<<<<< HEAD
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.dll.config
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\TechProject.Data.pdb
@@ -42,21 +5,8 @@ C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFrame
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.xml
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7oct.resources
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.dll
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.pdb
 C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7oct1.resources
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._11oct.resources
-=======
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7nov.resources
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
->>>>>>> a993972d83a75cb2c65e70912b32d58a143ebf35
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._7nov.resources
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.oct11.resources
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.oct11.resources
-C:\Users\vikash\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.College.resources
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations.removebigint.resources
-C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._11final.resources
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.Migrations._17oct.resources
+C:\Users\user\Documents\ShaheedBhagtSingh\TechProject.Data\obj\Debug\TechProject.Data.csproj.GenerateResource.Cache
