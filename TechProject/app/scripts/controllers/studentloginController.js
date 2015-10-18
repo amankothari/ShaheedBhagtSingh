@@ -1,7 +1,7 @@
 ﻿'use strict';
-Myapp.controller('StudentLoginController', ['$scope','$http', 'StudentLoginServices','$Location', function ($scope,$http, StudentLoginServices,$Location) {
+Myapp.controller('StudentLoginController', ['$scope', '$http', 'ngAuthsetting', 'StudentLoginServices', '$Location', function ($scope, $http, ngAuthsetting, StudentLoginServices, $Location) {
     console.log("Login Controller is loading...");
-
+    var serviceBase = ngAuthsetting.url;
     $scope.Login = function (Logindata) {   
             console.log("Add itemMaster");
             console.log(data);

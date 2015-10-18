@@ -1,6 +1,7 @@
 ﻿'use strict';
-Myapp.controller('StudentFileUploadController', ['$scope', '$http', 'getsetService', function ($scope, $http, getsetService) {
+Myapp.controller('StudentFileUploadController', ['$scope', 'ngAuthsetting', '$http', 'getsetService', function ($scope, ngAuthsetting, $http, getsetService) {
     console.log("Student FileUpload Controller is loading...");
+    var Service = ngAuthsetting.url;
     $scope.imageModel = [];
     $scope.stepsModel = [];
     var Filedata = [];
@@ -35,7 +36,7 @@ Myapp.controller('StudentFileUploadController', ['$scope', '$http', 'getsetServi
 
     $scope.Save = function (event) {
         console.log("Filedata");
-        var url = "api/studentlogin/update";
+        var url = Service + "api/studentlogin/update";
            console.log("Succesfully");
            console.log(Filedata.name);
            console.log($scope.imageModel);

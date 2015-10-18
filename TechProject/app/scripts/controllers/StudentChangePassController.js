@@ -1,14 +1,14 @@
 ﻿'use strict';
-Myapp.controller('StudentChangePassController', ['$scope', '$http', 'getsetService', function ($scope, $http, getsetService) {
+Myapp.controller('StudentChangePassController', ['$scope', '$http', 'getsetService', 'ngAuthsetting', function ($scope, $http, getsetService, ngAuthsetting) {
     console.log("Student Change Password Controller is loading...");
-
+    var service = ngAuthsetting.url;
     $scope.StudentData = getsetService.GetData();
     console.log($scope.StudentData.ApplicantID);
 
     $scope.ChangePassData = function (ChangePass) {
         console.log("update Student CHange Password Record");
         console.log(ChangePass);
-        var url = "api/studentlogin/changepasswrd";
+        var url = service + "api/studentlogin/changepasswrd";
         var dataToPost = {
             ApplicantID: $scope.StudentData.ApplicantID,
             Password: $scope.StudentData.Password,

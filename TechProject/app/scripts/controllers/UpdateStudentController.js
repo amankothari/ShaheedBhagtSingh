@@ -1,18 +1,14 @@
 'use strict';
-Myapp.controller('UpdateStudentController', ['$scope', '$http', 'getsetService', 'StudentLoginServices', function ($scope, $http, getsetService, StudentLoginServices) {
+Myapp.controller('UpdateStudentController', ['$scope', 'ngAuthsetting', '$http', 'getsetService', 'StudentLoginServices', function ($scope, ngAuthsetting, $http, getsetService, StudentLoginServices) {
     console.log("Student Register 1111 Controller is loading...");
-
+    var serviceBase = ngAuthsetting.url;
       $scope.Loginstudent =  getsetService.GetData();
    
-
     $scope.UpdateStudentData = function (Register) {
         console.log("Add Register data");
         console.log(Register);
-        var url = "api/studentlogin";
-        //var dataToPost = {
-        //    EmailId: $scope.Logindata.userid,
-        //    Password: $scope.Logindata.Password
-        //};
+        var url = serviceBase + "api/studentlogin";
+        
         $http.put(url, Register).success(function (data) {
             console.log(data);
             console.log("Error Gor Here");

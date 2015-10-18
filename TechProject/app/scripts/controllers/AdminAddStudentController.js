@@ -1,7 +1,7 @@
 ﻿'use strict';
-Myapp.controller('AdminAddStudentController', ['$scope', '$http','FileUploader', 'StudentRegisterServices', function ($scope, $http, FileUploader, StudentRegisterServices) {
+Myapp.controller('AdminAddStudentController', ['$scope', 'ngAuthsetting', '$http', 'FileUploader', 'StudentRegisterServices', function ($scope, ngAuthsetting, $http, FileUploader, StudentRegisterServices) {
     console.log("Admin Add StudentController is loading...");
-
+    var url = ngAuthsetting.url;
     $scope.student = [];
     StudentRegisterServices.Getallstudent().then(function (results) {
         console.log("gett");
@@ -19,7 +19,7 @@ Myapp.controller('AdminAddStudentController', ['$scope', '$http','FileUploader',
     }
 
     function sendFileToServer(formData, status) {
-        var uploadURL = "api/FileUpload"; //Upload URL
+        var uploadURL = url + "api/FileUpload"; //Upload URL
         var extraData = {}; //Extra Data.
         var jqXHR = $.ajax({
             xhr: function () {

@@ -20,10 +20,7 @@
                     <li class="nav-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Courses <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#/Courses">Course 1</a></li>
-                            <li><a href="#/Courses">Course 2</a></li>
-                            <li><a href="#/Courses">Course 3</a></li>
-                            <li><a href="#/Courses">Course 4</a></li>
+                            <li ng-repeat="course in GetCourse"><a href="#/Courses">{{course.CourseName}}</a></li>
 
                         </ul>
                     </li>
@@ -106,7 +103,9 @@
                 <div class="page-row">
                     <article class="map-section">
                         <h3 class="title">How to find us</h3>
-                        <div id="map"></div><!--//map-->
+                        <div id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9443530124045!2d77.0181258144889!3d23.025815321985984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397cfaaf0d06fcd9%3A0x1aee83f3adc9e19f!2sSHAHEED+BHAGAT+SINGH+COLLEGE!5e0!3m2!1sen!2sin!4v1445075429467" width="100%" height="320" frameborder="0" style="border:1px" allowfullscreen></iframe>
+                        </div><!--//map-->
                     </article><!--//map-->
                 </div><!--//page-row-->
             </div><!--//page-content-->

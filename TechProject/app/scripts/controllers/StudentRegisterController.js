@@ -1,7 +1,7 @@
 ﻿'use strict';
-Myapp.controller('StudentRegisterController', ['$scope', '$http', 'StudentRegisterServices', function ($scope, $http, StudentRegisterServices) {
+Myapp.controller('StudentRegisterController', ['$scope', 'ngAuthsetting', '$http', 'StudentRegisterServices', function ($scope, ngAuthsetting, $http, StudentRegisterServices) {
     console.log("Student Register 1111 Controller is loading...");
-
+    var serviceBase = ngAuthsetting.url;
    
     $scope.student = [];
     StudentRegisterServices.Getregister().then(function (results) {
@@ -14,7 +14,7 @@ Myapp.controller('StudentRegisterController', ['$scope', '$http', 'StudentRegist
     $scope.RegisterData = function (Register) {
         console.log("Add Register data");
         console.log(Register);
-        var url = "api/stquery";
+        var url = serviceBase + "api/stquery";
         //var dataToPost = {
         //    EmailId: $scope.Logindata.userid,
         //    Password: $scope.Logindata.Password
