@@ -39,10 +39,7 @@
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Courses <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#/Courses">Course 1</a></li>
-                                <li><a href="#/Courses">Course 2</a></li>
-                                <li><a href="#/Courses">Course 3</a></li>
-                                <li><a href="#/Courses">Course 4</a></li>
+                                <li ng-repeat="course in GetCourse"><a href="#/Courses">{{course.CourseName}}</a></li>
                                
                             </ul>
                         </li>
@@ -58,7 +55,7 @@
 
     </div>
     <div class="content container" style="padding-bottom:20px">
-        <div ng-controller="CarouselDemoCtrl" id="promo-slider" class="slider flexslider col-md-12">
+        <div ng-controller="CarouselDemoCtrl" id="promo-slider" class="slider flexslider col-md-12" style="padding-right: 4px; padding-left: 2px;">
             <div class="slides">
                 <carousel interval="myInterval">
                     <slide ng-repeat="slide in slides" active="slide.active">
@@ -91,16 +88,16 @@
             </section>
         </section>
         <form name="userForm" novalidate>
-            <section class="promo box box-dark  col-md-4 col-xs-12">
+            <section class="promo box box-dark  col-md-4 col-xs-12" style=" width: 33%;">
                 <div class="col-md-12 col-xs-12">
                     <h1 class="section-heading" style="margin-top: 5px; font-size:20px">Student Login</h1>
                     <div class="form-group" ng-class="{ 'has-error': userForm.userid.$invalid && userForm.userid.$dirty }">
                         <input type="text" name="userid" class="form-control" ng-model="Logindata.userid" placeholder="Enter your Applicant Id" required />
-                        <p ng-show="userForm.userid.$invalid && !userForm.userid.$pristine" class="help-block">You ID is required.</p>
+                        <p ng-show="userForm.userid.$invalid && !userForm.userid.$pristine" class="help-block">Your ID is required.</p>
                     </div>
 
                     <div class="form-group" ng-class="{ 'has-error': userForm.password.$invalid && userForm.password.$dirty }">
-                        <input type="password" name="password" class="form-control " ng-model=" Logindata.password" placeholder="full name as your paasword" required />
+                        <input type="password" name="password" class="form-control " ng-model=" Logindata.password" placeholder="dd/mm/yyyy" required />
                        
                     </div>
                    </div>

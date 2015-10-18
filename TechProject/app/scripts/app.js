@@ -12,27 +12,27 @@ var Myapp = angular.module('Myapp', ['ngAnimate', 'ngCookies', 'ngResource', 'ng
         })
         .when('/Courses', {
             templateUrl: 'app/views/website/Courses.html',
-            //controller: 'courseController'
+            controller: 'courseController'
         })
 
           .when('/AboutUs', {
               templateUrl: 'app/views/website/AboutUs.html',
-              //controller: 'StudentDetailsController'
+              controller: 'courseController'
           })
 
          .when('/contact', {
              templateUrl: 'app/views/website/contact.html',
-             //controller: 'StudentDetailsController'
+             controller: 'homeController'
          })
 
          .when('/News', {
              templateUrl: 'app/views/website/News.html',
-             //controller: 'StudentDetailsController'
+             controller: 'courseController'
          })
 
         .when('/Team', {
             templateUrl: 'app/views/website/Team.html',
-            //controller: 'StudentDetailsController'
+            controller: 'courseController'
         })
         .when('/Register', {
             templateUrl: 'app/views/website/Register.html',

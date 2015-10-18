@@ -12,7 +12,7 @@ Myapp.controller('AddCourseController', function ($scope, $http, CourseServices,
         $scope.EditData = getcourse;
         $scope.SaveEditCourse = function (EditData) {
             console.log(EditData);
-            var url = "api/course";
+            var url = SurviceBase + "api/course";
             $http.put(url, EditData).success(function (data) {
                 console.log(data);
               
@@ -42,7 +42,7 @@ Myapp.controller('AddCourseController', function ($scope, $http, CourseServices,
     $scope.AddCourse = function (Course) {
         console.log("Add Course data");
         console.log(Course);
-        var url = "api/course";
+        var url = SurviceBase + "api/course";
         $http.post(url, Course).success(function (data) {
             console.log(data);
             alert("You Succesfully Add Course");
